@@ -1,0 +1,132 @@
+nav.navbar.navbar-inverse.navbar-static-top
+  .container-fluid
+    .navbar-header
+      a.navbar-brand(href='')
+        img#brand(alt='Brand', src='/images/icon-36x36.png')
+        a#main-logo-name.navbar-brand WebDJs   
+      button.btn.btn-success.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+    .navbar-collapse.navHeaderCollapse
+      ul.nav.navbar-nav.navbar-right
+        li#login.nav
+          a.btn.dropdown-toggle(data-toggle='dropdown') Log In
+          .dropdown-menu
+            .log-in-form
+              .log-form
+                h1 Log In
+                hr
+                .form-group
+                  label(for='tb-username-log') Username: 
+                  .input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-user
+                    input#tb-username-log.form-control(type='text')
+                .form-group
+                  label(for='tb-password-log') Password: 
+                  .input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-lock
+                    input#tb-password-log.form-control(type='password')
+                a#btn-login.btn.btn-success(href='') Log In
+        li#register.nav
+          a.btn.dropdown-toggle(data-toggle='dropdown') Register
+          .dropdown-menu
+            .register-form
+              .log-form
+                h1 Register
+                hr
+                .form-group
+                  label(for='tb-username glyphicon glyphicon-user') Username: 
+                  .input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-user
+                    input#tb-username.form-control(type='text')
+                .form-group
+                  label(for='tb-passworn') Password: 
+                  .input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-lock
+                    input#tb-password.form-control(type='password')
+                .form-group
+                  label(for='tb-passworn-confirm') Confirm Password: 
+                  .input-group
+                    span.input-group-addon
+                      span.glyphicon.glyphicon-lock
+                    input#tb-password-confirm.form-control(type='password')
+                a#btn-register.btn.btn-primary(href='') Sign Up
+        li#profile.nav.invisible
+          a#btn-profile.btn(href='') Username
+        li#logout.nav.invisible
+          a#btn-logout.btn(href='') LogOut
+      ul#main-menu.nav.navbar-nav.navbar-center.invisible
+        li#test
+          a#test-btn.btn-default.navBtn(href='') Test
+        li    
+        li#tasks
+          a#tasks-btn.btn-default.navBtn(href='') Tasks
+        li    
+        li#dictIt
+          a#dict-btn.btn-default.navBtn(href='') Dictionary
+        li                       
+        li.nav.dropdown
+          a.btn.dropdown-toggle.dropdown-btn-view(data-toggle='dropdown') View-side
+          ul.dropdown-menu
+            li
+              hr
+              a.langs(href='') HTML
+            li
+              a.langs(href='') CSS
+            hr
+            li
+              a.langs(href='') Bootstrap
+            hr
+            li
+              a.langs(href='') LESS
+            li
+              a.langs(href='') SASS
+            li
+              a.langs(href='') Stylus
+            hr
+        li.nav.dropdown
+          a.btn.dropdown-toggle.dropdown-btn-client(href='', data-toggle='dropdown') Client-side
+          ul.dropdown-menu
+            li
+              hr
+              a.langs(href='') JavaScript
+            hr
+            li
+              a.langs(href='') JQuery
+            hr
+            li
+              a.langs(href='') TypeScript
+            hr
+            li
+              a.langs(href='') Angular
+            hr
+            li
+              a.langs(href='') React
+            hr
+        li.nav.dropdown
+          a.btn.dropdown-toggle.dropdown-btn-server(href='#', data-toggle='dropdown') Server-side
+          ul.dropdown-menu
+            li
+              hr
+              a.langs(href='') NodeJS
+            hr
+            li
+              a.langs(href='') Express
+            hr
+        li.nav.dropdown
+          a.btn.dropdown-toggle.dropdown-btn-db(href='#', data-toggle='dropdown') DB-side
+          ul.dropdown-menu
+            li
+              hr
+              a.langs(href='') MongoDB
+            hr
+            li
+              hr
+              a.langs(href='') Mongoose
+            hr
+        label#obj-title(style='color: lightsteelblue; margin-top: 4%; font-size: 13px;') HTML

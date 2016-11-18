@@ -1,9 +1,9 @@
-var mongoose = require("mongoose");
+let mongoose = require("mongoose");
 
-var requiredMessage = "{PATH} is required";
+let requiredMessage = "{PATH} is required";
 
 module.exports.init = function() {
-    var eventSchema = mongoose.Schema({
+    let termSchema = mongoose.Schema({
         title: { type: String, required: requiredMessage },
         description: { type: String, required: requiredMessage },
         category: { type: String, required: requiredMessage },
@@ -11,7 +11,7 @@ module.exports.init = function() {
         creator: { type: String, required: requiredMessage }
     });
 
-    var Event = mongoose.model("Event", eventSchema);
+    let Term = mongoose.model("Term", termSchema);
 };
 
 

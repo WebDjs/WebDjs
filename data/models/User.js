@@ -1,11 +1,11 @@
-var mongoose = require("mongoose"),
+let mongoose = require("mongoose"),
     encryption = require("../../utilities/encryption");
 
-var requiredMessage = "{PATH} is required";
-var defaultAvatar = "https://ninjageisha.files.wordpress.com/2012/08/ninja-tadaa.jpg";
+let requiredMessage = "{PATH} is required";
+let defaultAvatar = "https://ninjageisha.files.wordpress.com/2012/08/ninja-tadaa.jpg";
 
 module.exports.init = function() {
-    var userSchema = mongoose.Schema({
+    let userSchema = mongoose.Schema({
         username: { type: String, required: requiredMessage, unique: true },
         salt: String,
         hashPass: String,
@@ -38,7 +38,7 @@ module.exports.init = function() {
         }
     });
 
-    var User = mongoose.model("User", userSchema);
+    let User = mongoose.model("User", userSchema);
 };
 
 

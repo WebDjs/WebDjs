@@ -1,7 +1,7 @@
-var User = require("mongoose").model("User")
+let User = require("mongoose").model("User")
 
 module.exports = {
-    create: function(user, callback) {
+    create: (user, callback) => {
         User.create(user, callback)
     }
 };

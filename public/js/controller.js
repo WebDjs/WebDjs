@@ -19,7 +19,7 @@ $("#btn-login").on("click", function () {
             $("#tb-username-log").val("");
             $("#tb-password-log").val("");
             
-            ajaxRequester.get("/dict");
+            ajaxRequester.get("/main-logged");
         }
     }
 });

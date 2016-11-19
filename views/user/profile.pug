@@ -1,0 +1,24 @@
+extends ../shared/layout
+block main-content
+
+    div(style="padding-left: 10%")
+    script.
+        let username = $("#btn-profile").html();
+        $("#user-name").html(username);
+    h1
+        | Hi, 
+        strong#user-name
+    br
+    h2 Your results:
+    h2
+        | Status: 
+        em
+        b novice
+        |  / advanced / pro
+    br
+    .row
+        .add-menu.dropup
+        h3 Test questions:
+        br
+        a.btn.btn-primary.col-md-3(href="#/suggest-question") Suggest
+        a.btn.btn-success.col-md-3(href="#/correct-question") Correct

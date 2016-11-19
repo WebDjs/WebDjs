@@ -1,18 +1,20 @@
 "use strict";
 
-let express = require("express"),
-    openurl = require("openurl");
+let express = require("express");
 
 let env = process.env.NODE_ENV || "development";
 
 let app = express();
+
 let config = require("./config/config.js")[env];
-let port = config.port;
 
 require("./config/express")(app, config);
 require("./config/mongoose")(config);
 require("./config/passport")();
 require("./config/routes")(app);
+
+let port = config.port,
+    openurl = require("openurl");
 
 app.listen(port);
 openurl.open(`http://localhost:${port}`);

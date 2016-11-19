@@ -1,7 +1,7 @@
-let UsersController = require("./UsersController"),
-    TermsController = require("./TermsController");
+let usersController = require("./users-controller"),
+    termsController = require("./terms-controller");
 
 module.exports = {
-    users: UsersController,
-    terms: TermsController
+    users: usersController,
+    terms: termsController
 };

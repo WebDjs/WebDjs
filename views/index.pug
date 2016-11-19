@@ -1,46 +1,22 @@
 extends shared/layout
 block main-content
-  div
-    .container-fluid
-      .row.content
-        .col-sm-3
-          .input-group.search
-            input.form-control(type='text', placeholder='Search...')
-            span.input-group-btn
-              button.btn.btn-default(type='button')
-                span.glyphicon.glyphicon-search
-          ul#terms.nav.nav-pills.nav-stacked.items-list
-          .row
-            .add-menu.dropup
-              a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(href='#/add', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Add
-              .dropdown-menu(style='min-width: 100%; max-width: 100%; min-height: 420px; max-height: 420px; font-size: 28px;')
-                label.add-label(for='tb-title', style='margin-left: 1%')
-                  h5 Title:
-                input#tb-title.form-control(type='text', placeholder='Title of the term...', style='min-width: 98%; max-width: 98%; margin: 1%')
-                label.add-label(for='tb-description', style='margin-left: 1%', v='')
-                  h5 Description:
-                textarea#tb-description.form-control(type='text', placeholder='Description of the term...', style='min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%')
-                label.add-label(for='tb-example', style='margin-left: 1%')
-                  h5 Examples:
-                input#tb-example.form-control(type='url', placeholder='http://pastebin.com', style='min-width: 98%; max-width: 98%; margin: 1%')
-                label.add-label(for='tb-info', style='margin-left: 1%')
-                  h5 More information link:
-                input#tb-info.form-control(type='url', placeholder='http://www.w3schools.com', style='min-width: 98%; max-width: 98%; margin: 1%')
-                // <button class="btn btn-default btn-md" id="btn-add-item">Save</button>
-              a#dict-delete.btn.btn-danger.col-md-3(href='#') Delete
-              a#dict-edit.btn.btn-success.col-md-3(href='#') Edit
-          hr
-        .col-sm-9
-          #title
-            #title-value
-              p#term-name
-          .row
-            .col-md-6
-              textarea#term-definition.text
-            .col-md-6(style='font-size: 22px; color: gray; font-weight: bold;')
-              | Examples:
-              #term-examples.text
-          .row
-            .col-md-12(style='margin-top: -15px;')
-              a#term-more.links(href='#', target='_blank') More information
-              // <img class="img-nav" src="./assets/images/libs-logos/HTML5_logo_and_wordmark.svg.png" alt="html">
+    div(style="padding-left: 20px")
+        p(style="margin-left: 20px")
+        h2(align="center") Wellcome!
+        h3(align="center") This application helps you in learning web with HTML5 and JavaScript.
+        h3(align="center") With this application you can test your web knowlage and skills. 
+        br
+        h4(align="center", style="text-decoration: underline") It includes tests, tasks and dictionary about:
+        ul(align="center")
+            li
+            h4 HTML, CSS, Bootstrap, LESS, SASS, Stylus
+            li
+            h4 JavaScript, JQuery, TypeScript, Angular, React
+            li
+            h4 Node.js, Express
+            li
+            h4 MongoDB, Mongoose
+        br
+        br
+        h4(align="center") Registration is free and required because of feedback.
+        br

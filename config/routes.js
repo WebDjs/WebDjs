@@ -13,6 +13,9 @@ module.exports = function (app) {
         res.render("index");
     });
 
+    app.get("/dict", function (req, res) {
+        res.render("dict");
+    });
     app.get("*", function (req, res) {
         res.render("index");
     });

@@ -4,13 +4,14 @@ function sendAjax(method, url, options) {
     options = options || {};
 
     let headers = options.headers || {},
-        data = options.data || undefined;
+        data = options.data || undefined,
+        contentType = options.contentType ||  "text/html";
 
     let promise = new Promise((resolve, reject) => {
         $.ajax(url, {
             method,
-            contentType: "application/json",
-            data: JSON.stringify(data),
+            contentType: contentType,
+            data: data,
             headers,
             success: function (response) {
                 resolve(response);

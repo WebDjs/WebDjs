@@ -9,9 +9,9 @@ module.exports.init = function() {
         username: { type: String, required: requiredMessage, unique: true },
         salt: String,
         hashPass: String,
-        firstName: { type: String, required: requiredMessage},
-        lastName: { type: String, required: requiredMessage},
-        email: { type: String, required: requiredMessage},
+        firstName: { type: String },
+        lastName: { type: String },
+        email: { type: String },
         results: [{
             test: {
                 title: String,

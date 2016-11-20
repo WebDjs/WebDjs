@@ -1,4 +1,4 @@
-# NodeJsApps
+# Node.js standard app with MongoDB
 
 Run App:
 

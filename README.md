@@ -1,12 +1,11 @@
-# Node.js standard app with MongoDB
+# node.js + express standard web application with MongoDB
 
-Run App:
+local run:
 
 - install node.js
-- navigate to ./NodeJsApps
 - open cmd
-- execute: npm install 
-- execute: npm install bower -g 
+- navigate to ./WebDjs
+- execute: npm install  
 - execute: bower install
 
 - install mongoDb
@@ -14,5 +13,5 @@ Run App:
 - open cmd
 - execute: mongod
 - open new cmd
-- navigate to ./NodeJsApps
+- navigate to ./WebDjs
 - execute: npm start

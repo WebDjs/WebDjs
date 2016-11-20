@@ -6,6 +6,7 @@ local run:
 - open cmd
 - navigate to ./WebDjs
 - execute: npm install  
+- execute: npm install bower -g
 - execute: bower install
 
 - install mongoDb

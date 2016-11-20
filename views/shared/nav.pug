@@ -1,90 +1,134 @@
 nav.navbar.navbar-inverse.navbar-static-top
   .container-fluid
     .navbar-header
-      a.navbar-brand(href="/main")
-        img#brand(alt="Brand", src="/images/icon-36x36.png")
+      a.navbar-brand(href='/main')
+        img#brand(alt='Brand', src='./images/icon-36x36.png')
         a#main-logo-name.navbar-brand WebDJs   
-      button.btn.btn-success.navbar-toggle(data-toggle="collapse", data-target=".navbar-collapse")
+      button.btn.btn-success.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
         span.icon-bar
         span.icon-bar
         span.icon-bar
     .navbar-collapse.navHeaderCollapse
       ul.nav.navbar-nav.navbar-right
         li#login.nav
-          a.btn(href="/login") Log In
+          a.btn.dropdown-toggle(href='/login' data-toggle='dropdown') Log In
+          .dropdown-menu
+            .log-in-form
+              .log-form       
+                form(action="/login", method="post")
+                  h1 Log In
+                  hr
+                  .form-group
+                    label(for='tb-username-log') Username: 
+                    .input-group
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-user
+                      input#tb-username-log.form-control(type='text')
+                  .form-group
+                    label(for='tb-password-log') Password: 
+                    .input-group
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-lock
+                      input#tb-password-log.form-control(type='password')
+                  input#btn-login.btn.btn-success(type='submit', value='Log In') 
         li#register.nav
-          a.btn(href="/register") Register
+          a.btn.dropdown-toggle(href='/register', data-toggle='dropdown') Register
+          .dropdown-menu
+            .register-form
+              .log-form
+                form(action="/register", method="post")
+                  h1 Register
+                  hr
+                  .form-group
+                    label(for='tb-username glyphicon glyphicon-user') Username: 
+                    .input-group
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-user
+                      input#tb-username.form-control(type='text')
+                  .form-group
+                    label(for='tb-passworn') Password: 
+                    .input-group
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-lock
+                      input#tb-password.form-control(type='password')
+                  .form-group
+                    label(for='tb-passworn-confirm') Confirm Password: 
+                    .input-group
+                      span.input-group-addon
+                        span.glyphicon.glyphicon-lock
+                      input#tb-password-confirm.form-control(type='password')
+                  input#btn-register.btn.btn-primary(type='submit', value='Sign Up') 
         li#profile.nav.invisible
-          a#btn-profile.btn(href="/profile") Username
+          a#btn-profile.btn Username
         li#logout.nav.invisible
-          a#btn-logout.btn(href="/logout") LogOut
+          a#btn-logout.btn(href='/logout') LogOut
       ul#main-menu.nav.navbar-nav.navbar-center.invisible
         li#test
-          a#test-btn.btn-default.navBtn(href="/test") Test
+          a#test-btn.btn-default.navBtn(href='/test') Test
         li    
         li#tasks
-          a#tasks-btn.btn-default.navBtn(href="/tasks") Tasks
+          a#tasks-btn.btn-default.navBtn(href='/tasks') Tasks
         li    
         li#dictIt
-          a#dict-btn.btn-default.navBtn(href="/dict") Dictionary
+          a#dict-btn.btn-default.navBtn(href='/dict') Dictionary
         li                       
         li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-view(data-toggle="dropdown") View-side
+          a.btn.dropdown-toggle.dropdown-btn-view(data-toggle='dropdown') View-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href="") HTML
+              a.langs(href='/html') HTML
             li
-              a.langs(href="") CSS
+              a.langs(href='/css') CSS
             hr
             li
-              a.langs(href="") Bootstrap
+              a.langs(href='/bootstrap') Bootstrap
             hr
             li
-              a.langs(href="") LESS
+              a.langs(href='/less') LESS
             li
-              a.langs(href="") SASS
+              a.langs(href='/sass') SASS
             li
-              a.langs(href="") Stylus
+              a.langs(href='/stylus') Stylus
             hr
         li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-client(href="", data-toggle="dropdown") Client-side
+          a.btn.dropdown-toggle.dropdown-btn-client(href='#', data-toggle='dropdown') Client-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href="") JavaScript
+              a.langs(href='/javascript') JavaScript
             hr
             li
-              a.langs(href="") JQuery
+              a.langs(href='/jquery') JQuery
             hr
             li
-              a.langs(href="") TypeScript
+              a.langs(href='/typescript') TypeScript
             hr
             li
-              a.langs(href="") Angular
+              a.langs(href='/angular') Angular
             hr
             li
-              a.langs(href="") React
+              a.langs(href='/react') React
             hr
         li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-server(href="#", data-toggle="dropdown") Server-side
+          a.btn.dropdown-toggle.dropdown-btn-server(href='#', data-toggle='dropdown') Server-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href="") NodeJS
+              a.langs(href='/nodejs') NodeJS
             hr
             li
-              a.langs(href="") Express
+              a.langs(href='/express') Express
             hr
         li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-db(href="#", data-toggle="dropdown") DB-side
+          a.btn.dropdown-toggle.dropdown-btn-db(href='#', data-toggle='dropdown') DB-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href="") MongoDB
+              a.langs(href='/mongodb') MongoDB
             hr
             li
               hr
-              a.langs(href="") Mongoose
+              a.langs(href='/mongoose') Mongoose
             hr
-        label#obj-title(style="color: lightsteelblue; margin-top: 4%; font-size: 13px;") HTML
+        label#obj-title(style='color: lightsteelblue; margin-top: 4%; font-size: 13px') HTML

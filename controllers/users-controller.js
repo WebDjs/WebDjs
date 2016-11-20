@@ -1,18 +1,15 @@
 var encryption = require("../utilities/encryption");
 var users = require("../data/users");
 
-var CONTROLLER_NAME = "user";
-
 module.exports = {
     getRegister: (req, res, next) => {
-        res.render(CONTROLLER_NAME + "/register")
+       
     },
     postRegister: (req, res, next) => {
         let newUserData = req.body;
 
         if (newUserData.password != newUserData.confirmPassword) {
             req.session.error = "Passwords do not match!";
-            res.redirect("/register");
         }
         else {
             newUserData.salt = encryption.generateSalt();
@@ -36,6 +33,6 @@ module.exports = {
         }
     },
     getLogin: (req, res, next) => {
-        res.render(CONTROLLER_NAME + '/login');
+        
     }
 };

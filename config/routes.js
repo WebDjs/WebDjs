@@ -3,6 +3,10 @@ var auth = require("./auth"),
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
+        res.redirect("/main");
+    });
+
+    app.get("/main", function (req, res) {
         res.render("index");
     });
 
@@ -13,13 +17,8 @@ module.exports = function (app) {
     app.post("/login", auth.login);
     app.get("/logout", auth.logout);
 
-
     app.get("/profile", function (req, res) {
-        res.render("user/profile");
-    });
-
-    app.get("/main-logged", function (req, res) {
-        res.render("main-logged");
+        res.render("profile");
     });
 
     app.get("/dict", function (req, res) {
@@ -27,6 +26,6 @@ module.exports = function (app) {
     });
 
     app.get("*", function (req, res) {
-        res.render("index");
+        res.redirect("/main");
     });
 };

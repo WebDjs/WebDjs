@@ -42,16 +42,12 @@ form {
     margin: 0 auto;
 }
 
-span{
-    display: inline
-}
-
 .form-control {
-    display: inline-block
+    min-width: 550px
 }
 
 .log-form {
-    margin: 2px
+    margin: 4px
 }
 
 .langs {

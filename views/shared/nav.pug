@@ -11,53 +11,9 @@ nav.navbar.navbar-inverse.navbar-static-top
     .navbar-collapse.navHeaderCollapse
       ul.nav.navbar-nav.navbar-right
         li#login.nav
-          a.btn.dropdown-toggle(href='/login' data-toggle='dropdown') Log In
-          .dropdown-menu
-            .log-in-form
-              .log-form       
-                form(action="/login", method="post")
-                  h1 Log In
-                  hr
-                  .form-group
-                    label(for='tb-username-log') Username: 
-                    .input-group
-                      span.input-group-addon
-                        span.glyphicon.glyphicon-user
-                      input#tb-username-log.form-control(type='text')
-                  .form-group
-                    label(for='tb-password-log') Password: 
-                    .input-group
-                      span.input-group-addon
-                        span.glyphicon.glyphicon-lock
-                      input#tb-password-log.form-control(type='password')
-                  input#btn-login.btn.btn-success(type='submit', value='Log In') 
+          a.btn.dropdown-toggle(href='/login') LogIn
         li#register.nav
-          a.btn.dropdown-toggle(href='/register', data-toggle='dropdown') Register
-          .dropdown-menu
-            .register-form
-              .log-form
-                form(action="/register", method="post")
-                  h1 Register
-                  hr
-                  .form-group
-                    label(for='tb-username glyphicon glyphicon-user') Username: 
-                    .input-group
-                      span.input-group-addon
-                        span.glyphicon.glyphicon-user
-                      input#tb-username.form-control(type='text')
-                  .form-group
-                    label(for='tb-passworn') Password: 
-                    .input-group
-                      span.input-group-addon
-                        span.glyphicon.glyphicon-lock
-                      input#tb-password.form-control(type='password')
-                  .form-group
-                    label(for='tb-passworn-confirm') Confirm Password: 
-                    .input-group
-                      span.input-group-addon
-                        span.glyphicon.glyphicon-lock
-                      input#tb-password-confirm.form-control(type='password')
-                  input#btn-register.btn.btn-primary(type='submit', value='Sign Up') 
+          a.btn.dropdown-toggle(href='/register') Register
         li#profile.nav.invisible
           a#btn-profile.btn Username
         li#logout.nav.invisible

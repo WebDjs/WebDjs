@@ -1,38 +1,41 @@
-var encryption = require("../utilities/encryption");
-var users = require("../data/users");
+var encryption = require('../utilities/encryption');
+var users = require('../data/users');
+
+var CONTROLLER_NAME = 'users';
 
 module.exports = {
-    getRegister: (req, res, next) => {
-       
+    getRegister: function(req, res, next) {
+        res.render(CONTROLLER_NAME + '/register')
     },
-    postRegister: (req, res, next) => {
-        let newUserData = req.body;
+    postRegister: function(req, res, next) {
+        var newUserData = req.body;
 
         if (newUserData.password != newUserData.confirmPassword) {
-            req.session.error = "Passwords do not match!";
+            req.session.error = 'Passwords do not match!';
+            res.redirect('/register');
         }
         else {
             newUserData.salt = encryption.generateSalt();
             newUserData.hashPass = encryption.generateHashedPassword(newUserData.salt, newUserData.password);
-            users.create(newUserData, (err, user) => {
+            users.create(newUserData, function(err, user) {
                 if (err) {
-                    console.log(`Failed to register new user: ${err}`);
+                    console.log('Failed to register new user: ' + err);
                     return;
                 }
 
-                req.logIn(user, (err) => {
+                req.logIn(user, function(err) {
                     if (err) {
                         res.status(400);
-                        return res.send({ reason: err.toString() }); // TODO:
+                        return res.send({reason: err.toString()}); // TODO:
                     }
                     else {
-                        res.redirect("/");
+                        res.redirect('/logged');
                     }
                 })
             });
         }
     },
-    getLogin: (req, res, next) => {
-        
+    getLogin: function(req, res, next) {
+        res.render(CONTROLLER_NAME + '/login');
     }
 };

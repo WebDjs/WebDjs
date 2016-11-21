@@ -17,6 +17,10 @@ module.exports = function (app) {
     app.post("/login", auth.login);
     app.get("/logout", auth.logout);
 
+    app.get("/logged", function (req, res) {
+        res.render("logged");
+    });
+
     app.get("/profile", function (req, res) {
         res.render("profile");
     });

@@ -34,22 +34,6 @@ ul {
     max-height: 40px
 }
 
-form {
-    max-width: 650px;
-    background-color: whitesmoke;
-    border: 1px solid gray;
-    display: block;
-    margin: 0 auto;
-}
-
-.form-control {
-    min-width: 550px
-}
-
-.log-form {
-    margin: 4px
-}
-
 .langs {
     text-align: center;
     font-size: 20px;
@@ -61,7 +45,16 @@ form {
 
 main {
     background-color: whitesmoke;
-    min-height: 440px
+    min-height: 460px
+}
+
+.form-container {
+    max-width: 660px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
 }
 
 .search {
@@ -124,8 +117,15 @@ footer {
     margin-top: 0px
 }
 
+#github {
+    background-color: whitesmoke;
+    max-width: 40px;
+    display: block;
+    margin: 0 auto;
+}
+
 #github:hover {
-    border: 2px solid black
+    border: 1px solid black
 }
 
 #dict-container {
@@ -148,4 +148,9 @@ footer {
 .ctx-obj {
     display: inline;
     max-width: 50px
+}
+
+.logged{
+    background: lightgray;
+    min-height: 360px
 }

@@ -1,0 +1,20 @@
+extends ../shared/layout
+
+block main-content
+    div.form-container
+        h3 Register
+        hr
+        form(method="post")
+            label(for="email") E-mail
+            input(id="email" class="form-control" type="email" name="email" placeholder="E-mail")
+            br
+            label(for="username") Username
+            input(id="username" class="form-control" type="text" name="username" placeholder="Username")
+            br
+            label(for="password") Password
+            input(id="password" class="form-control" type="password" name="password" placeholder="Password")
+            br
+            label(for="confirm-password") Confirm Password
+            input(id="confirm-password" class="form-control" type="password" name="confirmPassword" placeholder="Confirm password")
+            br
+            input(id="btn-login" type="submit" class="btn btn-primary" value="Register")

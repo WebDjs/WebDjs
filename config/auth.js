@@ -1,11 +1,13 @@
 const passport = require("passport");
-const notifier = require('node-notifier');
+const notifier = require("node-notifier");
+var toastr = require("express-toastr");
 
 module.exports = {
     login: function (req, res, next) {
         let auth = passport.authenticate("local", function (err, user) {
             if (err) return next(err);
             if (!user) {
+
                 notifier.notify({
                     title: "Exception",
                     message: "Wrong username or password!",
@@ -15,6 +17,8 @@ module.exports = {
                 }, function (error, response) {
                     console.log(response);
                 });
+
+                //req.toastr.error("Wrong username or password!")
             }
 
             req.logIn(user, function (err) {

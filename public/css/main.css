@@ -2,6 +2,10 @@
     background-color: whitesmoke;
 }
 
+nav {
+    border-bottom: 1px solid whitesmoke
+}
+
 #main-logo-name {
     color: whitesmoke;
     font-size: 1.7em;
@@ -31,7 +35,8 @@ ul {
 }
 
 .navBtn {
-    max-height: 40px
+    max-height: 40px;
+    margin-top: 7px
 }
 
 .langs {

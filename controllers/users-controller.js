@@ -1,5 +1,6 @@
 var encryption = require('../utilities/encryption');
 var users = require('../data/users');
+var toastr = require("express-toastr");
 
 var CONTROLLER_NAME = 'users';
 

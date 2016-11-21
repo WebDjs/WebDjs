@@ -10,15 +10,15 @@ nav.navbar.navbar-inverse.navbar-static-top
         span.icon-bar
     .navbar-collapse.navHeaderCollapse
       ul.nav.navbar-nav.navbar-right
-        li#login.nav
+        li#login.nav.invisible
           a.btn.dropdown-toggle(href='/login') LogIn
-        li#register.nav
+        li#register.nav.invisible
           a.btn.dropdown-toggle(href='/register') Register
-        li#profile.nav.invisible
+        li#profile.nav
           a#btn-profile.btn Username
-        li#logout.nav.invisible
+        li#logout.nav
           a#btn-logout.btn(href='/logout') LogOut
-      ul#main-menu.nav.navbar-nav.navbar-center.invisible
+      ul#main-menu.nav.navbar-nav.navbar-center
         li#test
           a#test-btn.btn-default.navBtn(href='/test') Test
         li    

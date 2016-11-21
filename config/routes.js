@@ -25,6 +25,14 @@ module.exports = function (app) {
         res.render("profile");
     });
 
+    app.get("/test", function (req, res) {
+        res.render("test");
+    });
+
+    app.get("/problem", function (req, res) {
+        res.render("problem");
+    });
+
     app.get("/dict", function (req, res) {
         res.render("dict");
     });

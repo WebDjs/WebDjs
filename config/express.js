@@ -17,14 +17,24 @@ const sessionParams = {
 };
 
 module.exports = function (app, config) {
+
+    // View Engine
     app.set("view engine", "pug");
     app.set("views", config.rootPath + "/views");
-    app.use(cookieParser());
+    
+    // BodyParser Middleware
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(cookieParser());
+    
+    // Session init
     app.use(session(sessionParams));
+
+    // Passport init
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(cors());
+
+    // Set Static Folder
     app.use(express.static(config.rootPath + "/public"));
 };

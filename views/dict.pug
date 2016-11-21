@@ -1,4 +1,4 @@
-extends shared/layout
+extends shared/layout-logged
 block main-content
   div
     .container-fluid
@@ -21,10 +21,10 @@ block main-content
               h5 Description:
             textarea#tb-description.form-control(type='text', placeholder='Description of the term...', style='min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%')
             label.add-label(for='tb-example', style='margin-left: 1%')
-              h5 Examples:
-            input#tb-example.form-control(type='url', placeholder='http://pastebin.com', style='min-width: 98%; max-width: 98%; margin: 1%')
+              h5 Examples (set urls separated with space):
+            input#tb-example.form-control(type='url', placeholder='http://pastebin.com   http://www.github.com', style='min-width: 98%; max-width: 98%; margin: 1%')
             label.add-label(for='tb-info', style='margin-left: 1%')
-              h5 More information link:
+              h5 More information link (set an url):
             input#tb-info.form-control(type='url', placeholder='http://www.w3schools.com', style='min-width: 98%; max-width: 98%; margin: 1%')
             // <button class="btn btn-default btn-md" id="btn-add-item">Save</button>
           a#dict-delete.btn.btn-danger.col-md-3(href='#') Delete

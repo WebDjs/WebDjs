@@ -6,12 +6,12 @@ let env = process.env.NODE_ENV || "development";
 
 let app = express();
 
-let config = require("./config/config.js")[env];
+let config = require("./server/config/config")[env];
 
-require("./config/express")(app, config);
-require("./config/mongoose")(config);
-require("./config/passport")();
-require("./config/routes")(app);
+require("./server/config/express")(app, config);
+require("./server/config/mongoose")(config);
+require("./server/config/passport")();
+require("./server/config/routes")(app);
 
 let port = config.port,
     openurl = require("openurl");

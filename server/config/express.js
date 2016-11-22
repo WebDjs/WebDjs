@@ -20,7 +20,7 @@ module.exports = function (app, config) {
 
     // View Engine
     app.set("view engine", "pug");
-    app.set("views", config.rootPath + "/views");
+    app.set("views", config.rootPath + "/server/views");
     
     // BodyParser Middleware
     app.use(bodyParser.json());

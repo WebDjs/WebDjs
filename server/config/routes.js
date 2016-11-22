@@ -26,7 +26,7 @@ module.exports = function (app) {
     });
 
     app.get("/test", function (req, res) {
-        res.render("test");
+        res.render("test-view");
     });
 
     app.get("/problem", function (req, res) {

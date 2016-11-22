@@ -1,13 +1,13 @@
-let mainController = require("./main-controller"),
-    usersController = require("./users-controller"),
-    termsController = require("./terms-controller"),
-    tasksController = require("./tasks-controller"),
-    questionsController = require("./questions-controller");
+let main = require("./main-controller"),
+    users = require("./users-controller"),
+    terms = require("./terms-controller"),
+    tasks = require("./tasks-controller"),
+    questions = require("./questions-controller");
 
 module.exports = {
-    main: mainController,
-    users: usersController,
-    terms: termsController,
-    tasks: tasksController,
-    questions: termsController
+    main,
+    users,
+    terms,
+    tasks,
+    questions
 };

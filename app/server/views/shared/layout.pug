@@ -1,13 +1,6 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="UTF-8")
-    title WebDJs
-   
-    link(rel="icon", href="/images/icon-36x36.png")
-    link(rel="stylesheet", href="/css/main.css")
-    link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.css")
-    link(rel="stylesheet", href="/bower_components/toastr/toastr.css")
+  include head
 
   body#page
     #wrapper
@@ -15,10 +8,6 @@ html(lang="en")
       include nav
       main
           block main-content
-      footer#footer
-        div#github
-          a(href="https://github.com/Absend/WebDjs", target="_blank")
-            div(style="background-color: white; max-width: 40px; display: block; margin: auto")
-            img#github(src="/images/github.png", width="40px", height="40px")
+      include footer
 
       include scripts

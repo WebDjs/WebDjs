@@ -1,9 +1,12 @@
 "use strict";
-const questions = require("./services/questions"),
+const users = require("./services/users"),
+    questions = require("./services/questions"),
     tasks = require("./services/tasks"),
-    terms = require("./services/terms"),
-    users = require("./services/users");
+    terms = require("./services/terms");
 
 module.exports = {
-    users, questions, tasks, terms
+    users,
+    questions,
+    tasks,
+    terms
 }

@@ -13,27 +13,18 @@ module.exports = function (app) {
 
     app.get("/login", controllers.users.getLogin);
     app.post("/login", auth.login);
+
+    app.get("/logged", controllers.main.logged);
+
     app.get("/logout", auth.logout);
 
-    app.get("/logged", function (req, res) {
-        res.render("logged");
-    });
+    app.get("/profile", controllers.users.getProfile);
 
-    app.get("/profile", function (req, res) {
-        res.render("profile");
-    });
+    app.get("/test", controllers.questions.getTest);
 
-    app.get("/test", function (req, res) {
-        res.render("test-view");
-    });
+    app.get("/problem", controllers.tasks.getTasks);
 
-    app.get("/problem", function (req, res) {
-        res.render("problem");
-    });
-
-    app.get("/dict", function (req, res) {
-        res.render("dict");
-    });
+    app.get("/dict", controllers.terms.getDict);
 
     app.get("*", function (req, res) {
         res.redirect("/main");

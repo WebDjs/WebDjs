@@ -1,4 +1,4 @@
-let terms = require("../data/terms"),
+let data = require("../data"),
     constants = require("../common/constants");
 
 module.exports = {

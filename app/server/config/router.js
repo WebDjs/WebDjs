@@ -6,9 +6,7 @@ module.exports = function (app) {
         res.redirect("/main");
     });
 
-    app.get("/main", function (req, res) {
-        res.render("index");
-    });
+    app.get("/main", controllers.main.home);
 
     app.get("/register", controllers.users.getRegister);
     app.post("/register", controllers.users.postRegister);

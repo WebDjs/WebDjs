@@ -2,7 +2,6 @@ let mongoose = require("mongoose"),
     encryption = require("../../utilities/encryption");
 
 let requiredMessage = "{PATH} is required";
-let defaultAvatar = "https://ninjageisha.files.wordpress.com/2012/08/ninja-tadaa.jpg";
 
 module.exports.init = function() {
     let userSchema = mongoose.Schema({

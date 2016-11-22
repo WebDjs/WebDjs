@@ -1,9 +1,11 @@
 var mongoose = require("mongoose"),
     UserModel = require("../data/models/User"),
+    QuestionModel = require("../data/models/Question"),
+    TaskModel = require("../data/models/Task"),
     TermModel = require("../data/models/Term");
 
-module.exports = function(config) {
-    mongoose.connect(config.db);
+module.exports = function(params) {
+    mongoose.connect(params.db);
     var db = mongoose.connection;
 
     db.on("error", function(err){
@@ -20,5 +22,7 @@ module.exports = function(config) {
     });
 
     UserModel.init();
+    QuestionModel.init();
+    TaskModel.init();
     TermModel.init();
 };

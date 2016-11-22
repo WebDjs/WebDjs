@@ -1,15 +1,14 @@
-var encryption = require('../utilities/encryption');
-var users = require('../data/users');
-var toastr = require("express-toastr");
+let encryption = require('../utilities/encryption');
+let data = require("../data");
 
-var CONTROLLER_NAME = 'users';
+let CONTROLLER_NAME = 'users';
 
 module.exports = {
     getRegister: function(req, res, next) {
         res.render(CONTROLLER_NAME + '/register')
     },
     postRegister: function(req, res, next) {
-        var newUserData = req.body;
+        let newUserData = req.body;
 
         if (newUserData.password != newUserData.confirmPassword) {
             req.session.error = 'Passwords do not match!';
@@ -18,7 +17,7 @@ module.exports = {
         else {
             newUserData.salt = encryption.generateSalt();
             newUserData.hashPass = encryption.generateHashedPassword(newUserData.salt, newUserData.password);
-            users.create(newUserData, function(err, user) {
+            data.users.create(newUserData, function(err, user) {
                 if (err) {
                     console.log('Failed to register new user: ' + err);
                     return;

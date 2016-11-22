@@ -1,6 +1,7 @@
 "use strict";
 
-const notifier = require("node-notifier");
+const notifier = require("node-notifier"); // Show a native notification on Mac, Windows, Linux
+const timeWait = 5000;
 
 module.exports = (function () {
 
@@ -9,7 +10,7 @@ module.exports = (function () {
             title: "Success",
             message: msg,
             sound: false, // true | false.
-            time: 5000, // How long to show balloon in ms
+            time: timeWait, // How long to show balloon in ms
             wait: false, // Wait for User Action against Notification
         }, function (error, response) {
             console.log(response);
@@ -21,9 +22,9 @@ module.exports = (function () {
         notifier.notify({
             title: "Error",
             message: msg,
-            sound: false, // true | false.
-            time: 5000, // How long to show balloon in ms
-            wait: false, // Wait for User Action against Notification
+            sound: false,
+            time: timeWait,
+            wait: false,
         }, function (error, response) {
             console.log(response);
         });

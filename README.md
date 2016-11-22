@@ -1,18 +1,12 @@
-# node.js + express standard web application with MongoDB
+# WebDjs
+## Standard Web Application with node.js, express and  MongoDB
 
-local run:
+This application supports your web education.
 
-- install node.js
-- open cmd
-- navigate to ./WebDjs
-- execute: npm install  
-- execute: npm install bower -g
-- execute: bower install
+It includes tests, tasks and dictionary about:
+- HTML, CSS, Bootstrap, LESS, SASS, Stylus
+- JavaScript, JQuery, TypeScript, Angular, React
+- Node.js, Express
+- MongoDB, Mongoose
 
-- install mongoDb
-- add to path mongod.exe
-- open cmd
-- execute: mongod
-- open new cmd
-- navigate to ./WebDjs
-- execute: npm start
+ Registration is free and required because of feedback.

@@ -4,11 +4,11 @@ let requiredMessage = "{PATH} is required";
 
 module.exports.init = function() {
     let termSchema = mongoose.Schema({
-        title: { type: String, required: requiredMessage },
-        description: { type: String, required: requiredMessage },
-        category: { type: String, required: requiredMessage },
-        date: { type: Date, required: requiredMessage },
-        creator: { type: String, required: requiredMessage }
+        title: { type: String },
+        description: { type: String },
+        info: { type: String },
+        examples: { type: String },
+        date: { type: Date, default: Date.now() }
     });
 
     let Term = mongoose.model("Term", termSchema);

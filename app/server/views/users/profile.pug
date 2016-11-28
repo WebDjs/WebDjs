@@ -1,13 +1,10 @@
 extends ../shared/layout-logged
-block main-content
 
+block main-content
     div(style="padding-left: 10%")
-    script.
-        let username = $("#btn-profile").html();
-        $("#user-name").html(username);
     h1
         | Hi, 
-        strong#user-name
+        strong #{name}
     br
     h2 Your results:
     h2

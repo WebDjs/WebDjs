@@ -26,8 +26,6 @@ module.exports = function (app, config) {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(cookieParser());
-    
-    // Session init
     app.use(session(sessionParams));
 
     // Passport init
@@ -35,6 +33,6 @@ module.exports = function (app, config) {
     app.use(passport.session());
     app.use(cors());
 
-    // Set Static Folder
+    // Set Static Resources
     app.use(express.static(config.rootPath + "/public"));
 };

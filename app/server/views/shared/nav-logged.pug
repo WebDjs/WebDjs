@@ -9,78 +9,86 @@ nav.navbar.navbar-inverse.navbar-static-top
         span.icon-bar
         span.icon-bar
     .navbar-collapse.navHeaderCollapse
+
+      // logout and profile
       ul.nav.navbar-nav.navbar-right
         li#profile.nav
-          a#btn-profile.btn(href='/profile') Username
+          a#btn-profile.btn(href='/profile') #{name}
         li#logout.nav
           a#btn-logout.btn(href='/logout') LogOut
+
+      // functional options
       ul#main-menu.nav.navbar-nav.navbar-center
         li#test
           a#test-btn.btn-default.navBtn(href='/test') Test
         li    
         li#tasks
-          a#tasks-btn.btn-default.navBtn(href='/problem') Problem
+          a#tasks-btn.btn-default.navBtn(href='/tasks') Tasks
         li    
         li#dictIt
           a#dict-btn.btn-default.navBtn(href='/dict') Dictionary
-        li                       
+        li  
+
+        // dropdowns                     
         li.nav.dropdown
           a.btn.dropdown-toggle.dropdown-btn-view(data-toggle='dropdown') View-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href='/html') HTML
+              a.langs HTML
             li
-              a.langs(href='/css') CSS
+              a.langs CSS
             hr
             li
-              a.langs(href='/bootstrap') Bootstrap
+              a.langs Bootstrap
             hr
             li
-              a.langs(href='/less') LESS
+              a.langs LESS
             li
-              a.langs(href='/sass') SASS
+              a.langs SASS
             li
-              a.langs(href='/stylus') Stylus
+              a.langs Stylus
             hr
         li.nav.dropdown
           a.btn.dropdown-toggle.dropdown-btn-client(href='#', data-toggle='dropdown') Client-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href='/javascript') JavaScript
+              a.langs JavaScript
             hr
             li
-              a.langs(href='/jquery') JQuery
+              a.langs JQuery
             hr
             li
-              a.langs(href='/typescript') TypeScript
+              a.langs TypeScript
             hr
             li
-              a.langs(href='/angular') Angular
+              a.langs Angular
             hr
             li
-              a.langs(href='/react') React
+              a.langs React
             hr
         li.nav.dropdown
           a.btn.dropdown-toggle.dropdown-btn-server(href='#', data-toggle='dropdown') Server-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href='/nodejs') NodeJS
+              a.langs NodeJS
             hr
             li
-              a.langs(href='/express') Express
+              a.langs Express
             hr
         li.nav.dropdown
           a.btn.dropdown-toggle.dropdown-btn-db(href='#', data-toggle='dropdown') DB-side
           ul.dropdown-menu
             li
               hr
-              a.langs(href='/mongodb') MongoDB
+              a.langs MongoDB
             hr
             li
               hr
-              a.langs(href='/mongoose') Mongoose
+              a.langs Mongoose
             hr
+
+        // logo label
         label#obj-title(style='color: lightsteelblue; margin-top: 4%; font-size: 13px') HTML

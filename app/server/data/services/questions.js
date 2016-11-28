@@ -1,4 +1,4 @@
-let User = require("mongoose").model("Question");
+let Question = require("mongoose").model("Question");
  
 module.exports = {
     

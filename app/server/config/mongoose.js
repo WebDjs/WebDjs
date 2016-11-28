@@ -5,6 +5,7 @@ var mongoose = require("mongoose"),
     TermModel = require("../data/models/Term");
 
 module.exports = function(params) {
+    mongoose.Promise = global.Promise;
     mongoose.connect(params.db);
     var db = mongoose.connection;
 

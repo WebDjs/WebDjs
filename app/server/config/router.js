@@ -1,5 +1,4 @@
-var auth = require("./auth"),
-    controllers = require("../controllers");
+var controllers = require("../controllers");
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
@@ -12,19 +11,20 @@ module.exports = function (app) {
     app.post("/register", controllers.users.postRegister);
 
     app.get("/login", controllers.users.getLogin);
-    app.post("/login", auth.login);
+    app.post("/login", controllers.authentication.login);
+    app.get("/logout", controllers.authentication.logout);
 
-    app.get("/logged", controllers.main.logged);
-
-    app.get("/logout", auth.logout);
+    app.get("/logged");
 
     app.get("/profile", controllers.users.getProfile);
 
     app.get("/test", controllers.questions.getTest);
 
-    app.get("/problem", controllers.tasks.getTasks);
+    app.get("/tasks", controllers.tasks.getTasks);
 
     app.get("/dict", controllers.terms.getDict);
+
+    app.post("/add", controllers.terms.postTerm);
 
     app.get("*", function (req, res) {
         res.redirect("/main");

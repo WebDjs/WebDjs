@@ -1,4 +1,4 @@
-let User = require("mongoose").model("Task");
+let Task = require("mongoose").model("Task");
  
 module.exports = {
     

@@ -23,8 +23,9 @@ module.exports = {
                     //res.redirect("/error");
                     notifier.error(err.toString());
                 }
-
-                res.render("logged", { logoes: constantz.logos, name: constantz.currentUsername });
+                fs.readFile("./server/common/username.txt", (err, data) => {
+                    res.render("logged", { logoes: constantz.logos, name: data.toString() });
+                });
             })
         });
 

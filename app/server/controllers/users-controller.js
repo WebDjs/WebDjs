@@ -36,9 +36,10 @@ module.exports = {
                         notifier.error(err.toString());
                     }
                     else {
-
-                        res.render("logged", { name: constantz.currentUsername, logoes: constantz.logos });
-                        notifier.success("User registered!");
+                        fs.readFile("./server/common/username.txt", (err, data) => {
+                            res.render("logged", { logoes: constantz.logos, name: data.toString() });
+                            notifier.success("User registered!");
+                        });
                     }
                 })
             });
@@ -48,6 +49,8 @@ module.exports = {
         res.render(CONTROLLER_NAME + "/login");
     },
     getProfile: function (req, res, next) {
-        res.render(CONTROLLER_NAME + "/profile", { name: constantz.currentUsername });
+        fs.readFile("./server/common/username.txt", (err, data) => {
+            res.render(CONTROLLER_NAME + "/profile", { name: data.toString() });
+        });
     }
 };

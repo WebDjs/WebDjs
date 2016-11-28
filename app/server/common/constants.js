@@ -1,9 +1,4 @@
-let path = require("path");
-let fs =  require("fs");
-
 module.exports = {
-    rootPath: path.normalize(__dirname + "/../../"),
-    currentUsername: fs.readFileSync("./server/common/username.txt"),
     types: [
         {
             test: "test"

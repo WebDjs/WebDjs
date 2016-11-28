@@ -1,10 +1,13 @@
 let data = require("../data"),
     constantz = require("../common/constants");
 let notifier = require("../utilities/notifier");
+const fs = require("fs");
 
 module.exports = {
     getDict: (req, res, next) => {
-        res.render("dict", { name: constantz.currentUsername});
+        fs.readFile("./server/common/username.txt", (err, data) => {
+            res.render("dict", { name: data.toString() });
+        });
     },
     postTerm: (req, res) => {
         let newTerm = req.body;

@@ -159,3 +159,23 @@ footer {
     background: lightgray;
     min-height: 360px
 }
+
+.logoContainer {
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    display: inline-block;
+    min-width: 20%;
+    max-width: 20%;
+    padding-left: 3%
+}
+
+.logoContainer:hover {
+    background-color: lightgray
+}
+
+.logoImg{
+    width: 80%;
+    height: 200px;
+    margin: 10px
+}

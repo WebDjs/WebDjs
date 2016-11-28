@@ -1,6 +1,9 @@
+const constantz = require("../common/constants");
+const fs = require("fs");
 let encryption = require("../utilities/encryption");
 let notifier = require("../utilities/notifier");
 let data = require("../data");
+const pathToUsername = "./server/common/username.txt";
 
 let CONTROLLER_NAME = "users";
 
@@ -25,13 +28,16 @@ module.exports = {
                     return;
                 }
 
+                fs.writeFile(pathToUsername, newUserData.username);
+
                 req.logIn(user, function (err) {
                     if (err) {
                         res.status(400);
                         notifier.error(err.toString());
                     }
                     else {
-                        res.render("logged", { name: newUserData.username });
+
+                        res.render("logged", { name: constantz.currentUsername, logoes: constantz.logos });
                         notifier.success("User registered!");
                     }
                 })
@@ -42,6 +48,6 @@ module.exports = {
         res.render(CONTROLLER_NAME + "/login");
     },
     getProfile: function (req, res, next) {
-        res.render(CONTROLLER_NAME + "/profile");
+        res.render(CONTROLLER_NAME + "/profile", { name: constantz.currentUsername });
     }
 };

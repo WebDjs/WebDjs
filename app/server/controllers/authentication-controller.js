@@ -1,5 +1,8 @@
+const fs = require("fs");
 const passport = require("passport");
 const notifier = require("../utilities/notifier");
+const pathToUsername = "./server/common/username.txt";
+const constantz = require("../common/constants");
 
 module.exports = {
     login: function (req, res, next) {
@@ -11,20 +14,24 @@ module.exports = {
 
             if (!user) {
                 notifier.error("Wrong username or password!");
+                return;
             }
+            fs.writeFile(pathToUsername, req.body.username);
 
             req.logIn(user, function (err) {
                 if (err) {
                     //res.redirect("/error");
                     notifier.error(err.toString());
                 }
-                res.render("logged", { name: req.body.username } );
+
+                res.render("logged", { logoes: constantz.logos, name: constantz.currentUsername });
             })
         });
 
         auth(req, res, next);
     },
     logout: function (req, res, next) {
+        //fs.writeFile(pathToUsername, "");
         req.logout();
         res.redirect("/");
     },

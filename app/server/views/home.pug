@@ -1,9 +1,10 @@
-extends shared/layout-logged
+extends shared/layout
 
 block main-content
     div(style="padding-left: 20px")
         div.logosContainer
-            each logo in logoes
+            each logo in logos
                 div.logoContainer
                     img.logoImg(src= logo.path, alt= logo.name)
     br
+            

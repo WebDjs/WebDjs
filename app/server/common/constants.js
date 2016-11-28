@@ -1,4 +1,9 @@
+let path = require("path");
+let fs =  require("fs");
+
 module.exports = {
+    rootPath: path.normalize(__dirname + "/../../"),
+    currentUsername: fs.readFileSync("./server/common/username.txt"),
     types: [
         {
             test: "test"
@@ -59,79 +64,79 @@ module.exports = {
     ],
     logos: [
         {
-            "name": "html-img",
-            "path": "./assets/images/libs-logos/html.png",
-            "num": "1"
+            name: "html-image",
+            path: "images/logos/html.png",
+            num: "0"
         },
         {
-            "name": "css-img",
-            "path": "./assets/images/libs-logos/css.png",
-            "num": "2"
+            name: "css-image",
+            path: "images/logos/css.png",
+            num: "1"
         },
         {
-            "name": "bootstrap-img",
-            "path": "./assets/images/libs-logos/bootstrap.png",
-            "num": "3"
+            name: "bootstrap-image",
+            path: "images/logos/bootstrap.png",
+            num: "2"
         },
         {
-            "name": "less-img",
-            "path": "./assets/images/libs-logos/less.png",
-            "num": "4"
+            name: "less-image",
+            path: "images/logos/less.png",
+            num: "3"
         },
         {
-            "name": "sass-img",
-            "path": "./assets/images/libs-logos/sass.png",
-            "num": "5"
+            name: "sass-image",
+            path: "images/logos/sass.png",
+            num: "4"
         },
         {
-            "name": "stylus-img",
-            "path": "./assets/images/libs-logos/stylus.png",
-            "num": "6"
+            name: "stylus-image",
+            path: "images/logos/stylus.png",
+            num: "5"
         },
         {
-            "name": "js-img",
-            "path": "./assets/images/libs-logos/js.png",
-            "num": "7"
+            name: "js-image",
+            path: "images/logos/js.png",
+            num: "6"
         },
         {
-            "name": "jquery-img",
-            "path": "./assets/images/libs-logos/jquery.png",
-            "num": "8"
+            name: "jquery-image",
+            path: "images/logos/jquery.png",
+            num: "7"
         },
         {
-            "name": "ts-img",
-            "path": "./assets/images/libs-logos/ts.png",
-            "num": "9"
+            name: "ts-image",
+            path: "images/logos/ts.png",
+            num: "8"
         },
         {
-            "name": "angular-img",
-            "path": "./assets/images/libs-logos/angular.png",
-            "num": "10"
+            name: "angular-image",
+            path: "images/logos/angular.png",
+            num: "9"
         },
         {
-            "name": "react-img",
-            "path": "./assets/images/libs-logos/react.png",
-            "num": "11"
+            name: "react-image",
+            path: "images/logos/react.png",
+            num: "10"
         },
         {
-            "name": "nodejs-img",
-            "path": "./assets/images/libs-logos/nodejs.png",
-            "num": "12"
+            name: "nodejs-image",
+            path: "images/logos/nodejs.png",
+            num: "11"
         },
         {
-            "name": "express-img",
-            "path": "./assets/images/libs-logos/express.png",
-            "num": "13"
+            name: "express-image",
+            path: "images/logos/express.png",
+            num: "12"
         },
         {
-            "name": "mongodb-img",
-            "path": "./assets/images/libs-logos/mongodb.png",
-            "num": "14"
+            name: "mongodb-image",
+            path: "images/logos/mongodb.png",
+            num: "13"
         },
         {
-            "name": "mongoose-img",
-            "path": "./assets/images/libs-logos/mongoose.png",
-            "num": "15"
+            name: "mongoose-image",
+            path: "images/logos/mongoose.png",
+            num: "14"
         }
     ]
 };

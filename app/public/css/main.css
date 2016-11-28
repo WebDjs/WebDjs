@@ -165,8 +165,8 @@ footer {
     border-radius: 3px;
     margin: 5px;
     display: inline-block;
-    min-width: 20%;
-    max-width: 20%;
+    min-width: 5%;
+    max-width: 5%;
     padding-left: 3%
 }
 
@@ -175,7 +175,6 @@ footer {
 }
 
 .logoImg{
-    width: 80%;
-    height: 200px;
-    margin: 10px
+    width: 99%;
+    height: 60px;
 }

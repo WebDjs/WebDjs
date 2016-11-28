@@ -1,7 +1,7 @@
 nav.navbar.navbar-inverse.navbar-static-top
   .container-fluid
     .navbar-header
-      a.navbar-brand(href='/main')
+      a.navbar-brand(href='/logged')
         img#brand(alt='Brand', src='./images/icon-36x36.png')
         a#main-logo-name.navbar-brand WebDJs   
       button.btn.btn-success.navbar-toggle(data-toggle='collapse', data-target='.navbar-collapse')
@@ -9,6 +9,9 @@ nav.navbar.navbar-inverse.navbar-static-top
         span.icon-bar
         span.icon-bar
     .navbar-collapse.navHeaderCollapse
+    
+      // logo label
+      label#obj-title(style='color: ghostwhite; margin-left: 20%; margin-top: 1.5%; font-size: 20px') &nbsp;HTML 
 
       // logout and profile
       ul.nav.navbar-nav.navbar-right
@@ -27,68 +30,65 @@ nav.navbar.navbar-inverse.navbar-static-top
         li    
         li#dictIt
           a#dict-btn.btn-default.navBtn(href='/dict') Dictionary
-        li  
+        li 
 
-        // dropdowns                     
-        li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-view(data-toggle='dropdown') View-side
-          ul.dropdown-menu
-            li
-              hr
-              a.langs HTML
-            li
-              a.langs CSS
-            hr
-            li
-              a.langs Bootstrap
-            hr
-            li
-              a.langs LESS
-            li
-              a.langs SASS
-            li
-              a.langs Stylus
-            hr
-        li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-client(href='#', data-toggle='dropdown') Client-side
-          ul.dropdown-menu
-            li
-              hr
-              a.langs JavaScript
-            hr
-            li
-              a.langs JQuery
-            hr
-            li
-              a.langs TypeScript
-            hr
-            li
-              a.langs Angular
-            hr
-            li
-              a.langs React
-            hr
-        li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-server(href='#', data-toggle='dropdown') Server-side
-          ul.dropdown-menu
-            li
-              hr
-              a.langs NodeJS
-            hr
-            li
-              a.langs Express
-            hr
-        li.nav.dropdown
-          a.btn.dropdown-toggle.dropdown-btn-db(href='#', data-toggle='dropdown') DB-side
-          ul.dropdown-menu
-            li
-              hr
-              a.langs MongoDB
-            hr
-            li
-              hr
-              a.langs Mongoose
-            hr
-
-        // logo label
-        label#obj-title(style='color: lightsteelblue; margin-top: 4%; font-size: 13px') HTML
+        //- // dropdowns                     
+        //- li.nav.dropdown
+        //-   a.btn.dropdown-toggle.dropdown-btn-view(data-toggle='dropdown') View-side
+        //-   ul.dropdown-menu
+        //-     li
+        //-       hr
+        //-       a.langs HTML
+        //-     li
+        //-       a.langs CSS
+        //-     hr
+        //-     li
+        //-       a.langs Bootstrap
+        //-     hr
+        //-     li
+        //-       a.langs LESS
+        //-     li
+        //-       a.langs SASS
+        //-     li
+        //-       a.langs Stylus
+        //-     hr
+        //- li.nav.dropdown
+        //-   a.btn.dropdown-toggle.dropdown-btn-client(href='#', data-toggle='dropdown') Client-side
+        //-   ul.dropdown-menu
+        //-     li
+        //-       hr
+        //-       a.langs JavaScript
+        //-     hr
+        //-     li
+        //-       a.langs JQuery
+        //-     hr
+        //-     li
+        //-       a.langs TypeScript
+        //-     hr
+        //-     li
+        //-       a.langs Angular
+        //-     hr
+        //-     li
+        //-       a.langs React
+        //-     hr
+        //- li.nav.dropdown
+        //-   a.btn.dropdown-toggle.dropdown-btn-server(href='#', data-toggle='dropdown') Server-side
+        //-   ul.dropdown-menu
+        //-     li
+        //-       hr
+        //-       a.langs NodeJS
+        //-     hr
+        //-     li
+        //-       a.langs Express
+        //-     hr
+        //- li.nav.dropdown
+        //-   a.btn.dropdown-toggle.dropdown-btn-db(href='#', data-toggle='dropdown') DB-side
+        //-   ul.dropdown-menu
+        //-     li
+        //-       hr
+        //-       a.langs MongoDB
+        //-     hr
+        //-     li
+        //-       hr
+        //-       a.langs Mongoose
+        //-     hr

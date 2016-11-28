@@ -64,77 +64,77 @@ module.exports = {
     ],
     logos: [
         {
-            name: "html-image",
+            name: "html space",
             path: "images/logos/html.png",
             num: "0"
         },
         {
-            name: "css-image",
+            name: "css space",
             path: "images/logos/css.png",
             num: "1"
         },
         {
-            name: "bootstrap-image",
+            name: "bootstrap space",
             path: "images/logos/bootstrap.png",
             num: "2"
         },
         {
-            name: "less-image",
+            name: "less space",
             path: "images/logos/less.png",
             num: "3"
         },
         {
-            name: "sass-image",
+            name: "sass space",
             path: "images/logos/sass.png",
             num: "4"
         },
         {
-            name: "stylus-image",
+            name: "stylus space",
             path: "images/logos/stylus.png",
             num: "5"
         },
         {
-            name: "js-image",
+            name: "javascript space",
             path: "images/logos/js.png",
             num: "6"
         },
         {
-            name: "jquery-image",
+            name: "jquery space",
             path: "images/logos/jquery.png",
             num: "7"
         },
         {
-            name: "ts-image",
+            name: "typescript space",
             path: "images/logos/ts.png",
             num: "8"
         },
         {
-            name: "angular-image",
+            name: "angular space",
             path: "images/logos/angular.png",
             num: "9"
         },
         {
-            name: "react-image",
+            name: "react space",
             path: "images/logos/react.png",
             num: "10"
         },
         {
-            name: "nodejs-image",
+            name: "nodejs space",
             path: "images/logos/nodejs.png",
             num: "11"
         },
         {
-            name: "express-image",
+            name: "express space",
             path: "images/logos/express.png",
             num: "12"
         },
         {
-            name: "mongodb-image",
+            name: "mongodb space",
             path: "images/logos/mongodb.png",
             num: "13"
         },
         {
-            name: "mongoose-image",
+            name: "mongoose space",
             path: "images/logos/mongoose.png",
             num: "14"
         }

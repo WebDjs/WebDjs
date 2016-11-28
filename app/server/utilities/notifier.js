@@ -1,7 +1,7 @@
 "use strict";
 
 const notifier = require("node-notifier"); // Show a native notification on Mac, Windows, Linux
-const timeWait = 5000;
+const timeWait = 3000;
 
 module.exports = (function () {
 

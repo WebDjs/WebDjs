@@ -163,11 +163,9 @@ footer {
 .logoContainer {
     border: 2px solid black;
     border-radius: 3px;
-    margin: 5px;
     display: inline-block;
-    min-width: 5%;
-    max-width: 5%;
-    padding-left: 3%
+    min-width: 6%;
+    max-width: 6%;
 }
 
 .logoContainer:hover {
@@ -176,5 +174,5 @@ footer {
 
 .logoImg{
     width: 99%;
-    height: 60px;
+    height: 70px;
 }

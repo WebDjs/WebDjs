@@ -5,6 +5,7 @@ block main-content
         div.logosContainer
             each logo in logos
                 div.logoContainer
-                    img.logoImg(src= logo.path, alt= logo.name)
+                    a.logoLink
+                        img.logoImg(src= logo.path, alt= logo.name)
     br
             

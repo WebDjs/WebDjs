@@ -168,6 +168,11 @@ footer {
     max-width: 17%;
 }
 
+.logoContainerHome:hover {
+    background-color: lightgray;
+    opacity: 0.2
+}
+
 .logoContainer {
     border: 2px solid black;
     border-radius: 3px;

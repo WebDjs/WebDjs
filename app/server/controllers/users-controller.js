@@ -37,7 +37,7 @@ module.exports = {
                     }
                     else {
                         fs.readFile("./server/common/username.txt", (err, data) => {
-                            res.render("logged", { logoes: constantz.logos, name: data.toString() });
+                            res.render("dict", { logoes: constantz.logos, name: data.toString() });
                             notifier.success("User registered!");
                         });
                     }

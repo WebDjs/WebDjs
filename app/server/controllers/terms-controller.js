@@ -15,14 +15,22 @@ module.exports = {
     postTerm: (req, res) => {
         let newTerm = req.body;
 
-        data.terms.createTerm(newTerm, (err, term) => {
-            if (err) {
-                console.log("Failed to add new term: " + err);
-                //return res.send({ reason: err.toString() });
-                notifier.error("Failed to add new term: " + err);
-            }
-            notifier.success("Term added!");
-            res.redirect("/dict");
-        });
+        if (newTerm.title !== "" && newTerm.description !== "") {
+            data.terms.createTerm(newTerm, (err, term) => {
+                if (err) {
+                    console.log("Failed to add new term: " + err);
+                    //return res.send({ reason: err.toString() });
+                    notifier.error("Failed to add new term: " + err);
+                    res.status(400);
+                }
+                notifier.success("Term added!");
+                res.status(200);
+                res.redirect("/dict");
+            });
+        }
+        else {
+            notifier.error("Title and description must not be empty!");
+            res.status(400);
+        }
     }
 };

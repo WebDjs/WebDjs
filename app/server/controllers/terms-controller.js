@@ -12,7 +12,9 @@ module.exports = {
         res.redirect("/dict-not-logged");
     },
     getDictNotLogged: (req, res) => {
-        res.render("dict-not-logged", { logoes: constantz.logos, terms: [tag] });
+        data.terms.getTermsByTag(tag).then((result) => {
+            res.render("dict-not-logged", { logoes: constantz.logos, terms: result });
+        });
     },
     getDict: (req, res) => {
         fs.readFile("./server/common/username.txt", (err, data) => {

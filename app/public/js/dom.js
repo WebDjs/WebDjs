@@ -12,11 +12,15 @@ $(".logoLink").on("click", function () {
         return $.ajax({
             type: "POST",
             url: "/dict-tag",
-            data: {data: altValue},
+            data: { data: altValue },
             success: () => { console.log("Tag sent!"); },
             dataType: "json"
         });
     };
 
     tagRequest();
-}); 
+});
+
+$("#add-form").on("click", (event) => {
+    event.stopPropagation();
+});

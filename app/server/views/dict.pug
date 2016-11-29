@@ -22,12 +22,12 @@ block main-content
         .add-menu.dropup
           a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Add
           .dropdown-menu(style='min-width: 100%; max-width: 100%; min-height: 420px; max-height: 420px; font-size: 28px;')
-            form(method='post', action='/add')
+            form#add-form(method='post', action='/add')
               label.add-label(for='tb-title', style='margin-left: 1%')
                 h5 Title:
-              .row(style="margin-left: 1%")
+              .row(style="margin-left: 3px")
                 input#tb-title.form-control.col-md-8(name='title', type='text', placeholder='Title of the term...', style='min-width: 60%; max-width: 60%; margin: 1%')
-                select.selectpicker.col-md-4(name='tag')
+                select.col-md-4(name="tag", style="margin-top: 5px; min-height: 30px; max-width: 32%; font-size: 18px")
                   option html
                   option css
                   option bootstrap

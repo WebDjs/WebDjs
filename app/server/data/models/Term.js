@@ -8,6 +8,7 @@ module.exports.init = function() {
         description: { type: String },
         info: { type: String },
         examples: { type: String },
+        tag: { type: String },
         date: { type: Date, default: Date.now() }
     });
 

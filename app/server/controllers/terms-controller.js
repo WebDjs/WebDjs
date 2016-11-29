@@ -1,13 +1,20 @@
-let data = require("../data"),
-    constantz = require("../common/constants");
-let notifier = require("../utilities/notifier");
 const fs = require("fs");
+let data = require("../data"),
+    constantz = require("../common/constants"),
+    notifier = require("../utilities/notifier"),
+    tag = "";
 
 module.exports = {
-    getDictNotLogged: (req, res, next) => {
-        res.render("dict-not-logged", { logoes: constantz.logos });
+    postTag: (req, res) => {
+        let data = req.body.data;
+        let len = data.length - 6;
+        tag = data.substr(0, len);
+        res.redirect("/dict-not-logged");
     },
-    getDict: (req, res, next) => {
+    getDictNotLogged: (req, res) => {
+        res.render("dict-not-logged", { logoes: constantz.logos, terms: [tag] });
+    },
+    getDict: (req, res) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
             res.render("dict", { name: data.toString(), logoes: constantz.logos });
         });

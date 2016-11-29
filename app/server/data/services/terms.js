@@ -12,14 +12,14 @@ module.exports = {
             });
         });
     },
-    getTermById(id) {
+    getTermsByTag(tag) {
         return new Promise((resolve, reject) => {
-            Term.findOne({ _id: id }, (err, term) => {
+            Term.find({ tag: tag }, (err, terms) => {
                 if (err) {
                     return reject(err);
                 }
 
-                return resolve(term);
+                return resolve(terms);
             });
         });
     },

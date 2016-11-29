@@ -25,7 +25,24 @@ block main-content
             form(method='post', action='/add')
               label.add-label(for='tb-title', style='margin-left: 1%')
                 h5 Title:
-              input#tb-title.form-control(name='title', type='text', placeholder='Title of the term...', style='min-width: 98%; max-width: 98%; margin: 1%')
+              .row(style="margin-left: 1%")
+                input#tb-title.form-control.col-md-8(name='title', type='text', placeholder='Title of the term...', style='min-width: 60%; max-width: 60%; margin: 1%')
+                select.selectpicker.col-md-4(name='tag')
+                  option html
+                  option css
+                  option bootstrap
+                  option less
+                  option sass
+                  option stylus
+                  option js
+                  option jquery
+                  option ts
+                  option angular
+                  option react
+                  option nodejs
+                  option express
+                  option mongodb
+                  option mongoose
               label.add-label(for='tb-description', style='margin-left: 1%')
                 h5 Description:
               textarea#tb-description.form-control(name='description', type='text', placeholder='Description of the term...', style='min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%')

@@ -18,8 +18,9 @@ block main-content
           button.btn.btn-default(type='button')
             span.glyphicon.glyphicon-search
       ul#terms.nav.nav-pills.nav-stacked.items-list
-      .row
-        .add-menu.dropup
+        each term in terms
+          li
+            a= term
          
       hr
     .col-sm-9

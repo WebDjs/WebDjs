@@ -28,6 +28,7 @@ module.exports = function (app) {
 
     app.get("/dict", controllers.terms.getDict);
     app.get("/dict-not-logged", controllers.terms.getDictNotLogged);
+    app.post("/dict-tag", controllers.terms.postTag);
 
     app.post("/add", controllers.terms.postTerm);
 

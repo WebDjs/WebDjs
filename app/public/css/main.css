@@ -194,3 +194,7 @@ footer {
     width: 99%;
     height: 170px;
 }
+
+.info:hover{
+    visibility: visible
+}

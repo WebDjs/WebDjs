@@ -160,6 +160,14 @@ footer {
     min-height: 360px
 }
 
+.logoContainerHome {
+    border: 2px solid black;
+    border-radius: 3px;
+    display: inline-block;
+    min-width: 17%;
+    max-width: 17%;
+}
+
 .logoContainer {
     border: 2px solid black;
     border-radius: 3px;
@@ -175,4 +183,9 @@ footer {
 .logoImg{
     width: 99%;
     height: 70px;
+}
+
+.logoImgHome{
+    width: 99%;
+    height: 170px;
 }

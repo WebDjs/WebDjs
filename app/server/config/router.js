@@ -14,13 +14,17 @@ module.exports = function (app) {
     app.post("/login", controllers.authentication.login);
     app.get("/logout", controllers.authentication.logout);
 
-    app.get("/logged");
+    app.get("/logged", (req, res) => {
+        res.redirect("/dict");
+    });
 
     app.get("/profile", controllers.users.getProfile);
 
     app.get("/test", controllers.questions.getTest);
 
     app.get("/tasks", controllers.tasks.getTasks);
+
+    app.get("/single-task", controllers.tasks.singleTask);
 
     app.get("/dict", controllers.terms.getDict);
 

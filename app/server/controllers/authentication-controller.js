@@ -24,7 +24,7 @@ module.exports = {
                     notifier.error(err.toString());
                 }
                 fs.readFile("./server/common/username.txt", (err, data) => {
-                    res.render("logged", { logoes: constantz.logos, name: data.toString() });
+                    res.render("dict", { logoes: constantz.logos, name: data.toString() });
                 });
             })
         });

@@ -1,6 +1,13 @@
 extends shared/layout-logged
 
 block main-content
+  div(style="padding-left: 20px")
+      div.logosContainer
+          each logo in logoes
+              div.logoContainer
+                  a.logoLink
+                      img.logoImg(src= logo.path, alt= logo.name)
+  br
   div
     .container-fluid
   .row.content

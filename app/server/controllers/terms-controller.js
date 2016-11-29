@@ -6,7 +6,7 @@ const fs = require("fs");
 module.exports = {
     getDict: (req, res, next) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
-            res.render("dict", { name: data.toString() });
+            res.render("dict", { name: data.toString(), logoes: constantz.logos });
         });
     },
     postTerm: (req, res) => {

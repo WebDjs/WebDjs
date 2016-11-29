@@ -27,6 +27,7 @@ module.exports = function (app) {
     app.get("/single-task", controllers.tasks.singleTask);
 
     app.get("/dict", controllers.terms.getDict);
+    app.get("/dict-not-logged", controllers.terms.getDictNotLogged);
 
     app.post("/add", controllers.terms.postTerm);
 

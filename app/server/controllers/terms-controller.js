@@ -4,6 +4,9 @@ let notifier = require("../utilities/notifier");
 const fs = require("fs");
 
 module.exports = {
+    getDictNotLogged: (req, res, next) => {
+        res.render("dict-not-logged", { logoes: constantz.logos });
+    },
     getDict: (req, res, next) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
             res.render("dict", { name: data.toString(), logoes: constantz.logos });

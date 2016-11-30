@@ -23,6 +23,17 @@ module.exports = {
             });
         });
     },
+    getTermsByTitle(title) {
+        return new Promise((resolve, reject) => {
+            Term.find({ title: title }, (err, terms) => {
+                if (err) {
+                    return reject(err);
+                }
+
+                return resolve(terms);
+            });
+        });
+    },
     createTerm(newTerm, callback) {
         Term.create(newTerm, callback);
     }

@@ -20,19 +20,19 @@ block main-content
       ul#terms.nav.nav-pills.nav-stacked.items-list
         each term in terms
           li
-            a= term.title
+            a.current-term-title= term.title
          
       hr
     .col-sm-9
       #title
         #title-value
-          p#term-name
+          p#term-name= currentTerm.title
       .row
         .col-md-6
-          textarea#term-definition.text
+          textarea#term-definition.text= currentTerm.definition
         .col-md-6(style='font-size: 22px; color: gray; font-weight: bold;')
           | Examples:
           #term-examples.text
       .row
         .col-md-12(style='margin-top: -15px;')
-          a#term-more.links(href='#', target='_blank') More information
+          a#term-more.links(href=currentTerm.info, target='_blank') More information

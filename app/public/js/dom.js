@@ -1,5 +1,17 @@
 "use strict";
 
+let requester = {
+    post: (url, data) => {
+        return $.ajax({
+            type: "POST",
+            url: url,
+            data: { data: data },
+            success: () => { console.log("Request sent!"); },
+            dataType: "json"
+        });
+    }
+}
+
 $(".logoLink").on("click", function () {
 
     let altValue = $(this).children("img").attr("alt");
@@ -8,17 +20,14 @@ $(".logoLink").on("click", function () {
 
     $(this).css("background-color", "#f5def9");
 
-    function tagRequest() {
-        return $.ajax({
-            type: "POST",
-            url: "/dict-tag",
-            data: { data: altValue },
-            success: () => { console.log("Tag sent!"); },
-            dataType: "json"
-        });
-    };
+    requester.post("/dict-tag", altValue);
+});
 
-    tagRequest();
+$(".current-term-title").on("click", function () {
+
+    let currentTitle = $(this).text();
+
+    requester.post("/dict-current-title", currentTitle);
 });
 
 $("#add-form").on("click", (event) => {

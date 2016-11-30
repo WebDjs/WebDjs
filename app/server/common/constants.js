@@ -59,77 +59,77 @@ module.exports = {
     ],
     logos: [
         {
-            name: "html space",
+            name: "html",
             path: "images/logos/html.png",
             num: "0"
         },
         {
-            name: "css space",
+            name: "css",
             path: "images/logos/css.png",
             num: "1"
         },
         {
-            name: "bootstrap space",
+            name: "bootstrap",
             path: "images/logos/bootstrap.png",
             num: "2"
         },
         {
-            name: "less space",
+            name: "less",
             path: "images/logos/less.png",
             num: "3"
         },
         {
-            name: "sass space",
+            name: "sass",
             path: "images/logos/sass.png",
             num: "4"
         },
         {
-            name: "stylus space",
+            name: "stylus",
             path: "images/logos/stylus.png",
             num: "5"
         },
         {
-            name: "javascript space",
+            name: "javascript",
             path: "images/logos/js.png",
             num: "6"
         },
         {
-            name: "jquery space",
+            name: "jquery",
             path: "images/logos/jquery.png",
             num: "7"
         },
         {
-            name: "typescript space",
+            name: "typescript",
             path: "images/logos/ts.png",
             num: "8"
         },
         {
-            name: "angular space",
+            name: "angular",
             path: "images/logos/angular.png",
             num: "9"
         },
         {
-            name: "react space",
+            name: "react",
             path: "images/logos/react.png",
             num: "10"
         },
         {
-            name: "nodejs space",
+            name: "nodejs",
             path: "images/logos/nodejs.png",
             num: "11"
         },
         {
-            name: "express space",
+            name: "express",
             path: "images/logos/express.png",
             num: "12"
         },
         {
-            name: "mongodb space",
+            name: "mongodb",
             path: "images/logos/mongodb.png",
             num: "13"
         },
         {
-            name: "mongoose space",
+            name: "mongoose",
             path: "images/logos/mongoose.png",
             num: "14"
         }

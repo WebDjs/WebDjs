@@ -2,12 +2,12 @@ const fs = require("fs");
 let data = require("../data"),
     constantz = require("../common/constants"),
     notifier = require("../utilities/notifier"),
-    tag = "",
+    termsTag = "",
     terms = [],
     currentTerm = {};
 
 module.exports = {
-    postTitle: (req, res) => {
+    postTitleNotLogged: (req, res) => {
         let titleValue = req.body.data;
 
         data.terms.getTermsByTitle(titleValue)
@@ -17,16 +17,15 @@ module.exports = {
                 res.redirect("/dict-not-logged");
             });
     },
-    postTag: (req, res) => {
-        let dataValue = req.body.data;
-        let len = dataValue.length - 6;
-
-        tag = dataValue.substr(0, len);
+    postTagNotLogged: (req, res) => {
+        termsTag = req.body.data;
+        currentTerm = {};
 
         res.render("dict-not-logged", { logoes: constantz.logos, terms: terms, currentTerm: currentTerm });
     },
     getDictNotLogged: (req, res) => {
-        data.terms.getTermsByTag(tag)
+        
+        data.terms.getTermsByTag(termsTag)
             .then((result) => {
                 terms = result;
                 
@@ -45,7 +44,6 @@ module.exports = {
             data.terms.createTerm(newTerm, (err, term) => {
                 if (err) {
                     console.log("Failed to add new term: " + err);
-                    //return res.send({ reason: err.toString() });
                     notifier.error("Failed to add new term: " + err);
                     res.status(400);
                 }

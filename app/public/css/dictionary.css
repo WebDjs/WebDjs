@@ -1,0 +1,94 @@
+.term-value:hover {
+    font-size: 22px;
+    font-weight: bold
+}
+
+#term-definition {
+    text-align: justify
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.navBtn {
+    max-height: 40px;
+    margin-top: 7px
+}
+
+.langs {
+    text-align: center;
+    font-size: 20px;
+}
+
+.form-container {
+    max-width: 660px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.search {
+    margin-top: -9px
+}
+
+.items-list {
+    min-height: 360px;
+    max-height: 360px;
+    border: 1px solid darkgrey;
+    background-color: ghostwhite;
+    margin-top: 11px;
+    font-size: 18px;
+    overflow: scroll;
+}
+
+.add-menu {
+    margin-top: 2%;
+    margin-left: 5%
+}
+
+#title {
+    max-height: 45px;
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: left;
+    color: steelblue;
+    margin-top: -18px
+}
+
+#title-value {
+    margin-top: 5px
+}
+
+.text {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 360px;
+    max-height: 360px;
+    font-size: 22px;
+    color: steelblue;
+}
+
+.links {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    font-size: 24px;
+    color: gray;
+}
+
+.current-term-title{
+    font-weight: bold
+}
+
+.current-term-title:hover{
+    font-size: 24px;
+}

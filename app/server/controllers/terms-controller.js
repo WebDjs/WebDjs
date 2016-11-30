@@ -3,6 +3,7 @@ let data = require("../data"),
     constantz = require("../common/constants"),
     notifier = require("../utilities/notifier"),
     tag = "",
+    terms = [],
     currentTerm = {};
 
 module.exports = {
@@ -13,20 +14,23 @@ module.exports = {
             .then((result) => {
                 currentTerm = result[0];
                 console.log(currentTerm);
-                
+
                 res.redirect("/dict-not-logged");
             });
     },
-    postTag: (req, res) => {
+    postTag: (req, res, next) => {
         let dataValue = req.body.data;
         let len = dataValue.length - 6;
         tag = dataValue.substr(0, len);
-        res.redirect("/dict-not-logged");
+        res.render("dict-not-logged", { logoes: constantz.logos, terms: terms, currentTerm: currentTerm });
+        next();
     },
-    getDictNotLogged: (req, res) => {
+    getDictNotLogged: (req, res,  next) => {
         data.terms.getTermsByTag(tag)
             .then((result) => {
-                res.render("dict-not-logged", { logoes: constantz.logos, terms: result, currentTerm: currentTerm });
+                terms = result;
+                res.render("dict-not-logged", { logoes: constantz.logos, terms: terms, currentTerm: currentTerm });
+                next();
             });
     },
     getDict: (req, res) => {

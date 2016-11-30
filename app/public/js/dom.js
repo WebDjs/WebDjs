@@ -6,7 +6,7 @@ let requester = {
             type: "POST",
             url: url,
             data: { data: data },
-            success: () => { console.log("Request sent!"); },
+            success: window.location.reload(),
             dataType: "json"
         });
     }

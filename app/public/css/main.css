@@ -155,7 +155,7 @@ footer {
     max-width: 50px
 }
 
-.logged{
+.logged {
     background: lightgray;
     min-height: 360px
 }
@@ -174,27 +174,29 @@ footer {
 }
 
 .logoContainer {
+    padding: 1ex;
     border: 2px solid black;
     border-radius: 3px;
+    margin-left: 2px;
     display: inline-block;
-    min-width: 6%;
-    max-width: 6%;
+    min-width: 6em;
+    max-width: 6em;
 }
 
 .logoContainer:hover {
     background-color: lightgray
 }
 
-.logoImg{
+.logoImg {
     width: 99%;
     height: 70px;
 }
 
-.logoImgHome{
+.logoImgHome {
     width: 99%;
     height: 170px;
 }
 
-.info:hover{
+.info:hover {
     visibility: visible
 }

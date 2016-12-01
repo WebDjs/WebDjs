@@ -1,4 +1,5 @@
 module.exports = {
+    defaultImageUrl: "https://gitlab.com/uploads/project/avatar/1345047/leaflet-here.png",
     types: [
         {
             test: "test"
@@ -59,79 +60,74 @@ module.exports = {
     ],
     logos: [
         {
-            name: "html",
+            name: "html loading...",
             path: "images/logos/html.png",
             num: "0"
         },
         {
-            name: "css",
+            name: "css loading...",
             path: "images/logos/css.png",
             num: "1"
         },
         {
-            name: "bootstrap",
+            name: "bootstrap loading...",
             path: "images/logos/bootstrap.png",
             num: "2"
         },
         {
-            name: "less",
+            name: "less loading...",
             path: "images/logos/less.png",
             num: "3"
         },
         {
-            name: "sass",
+            name: "sass loading...",
             path: "images/logos/sass.png",
             num: "4"
         },
         {
-            name: "stylus",
+            name: "stylus loading...",
             path: "images/logos/stylus.png",
             num: "5"
         },
         {
-            name: "javascript",
+            name: "javascript loading...",
             path: "images/logos/js.png",
             num: "6"
         },
         {
-            name: "jquery",
+            name: "jquery loading...",
             path: "images/logos/jquery.png",
             num: "7"
         },
         {
-            name: "typescript",
+            name: "typescript loading...",
             path: "images/logos/ts.png",
             num: "8"
         },
         {
-            name: "angular",
+            name: "angular loading...",
             path: "images/logos/angular.png",
             num: "9"
         },
         {
-            name: "react",
+            name: "react loading...",
             path: "images/logos/react.png",
             num: "10"
         },
         {
-            name: "nodejs",
+            name: "nodejs loading...",
             path: "images/logos/nodejs.png",
             num: "11"
         },
         {
-            name: "express",
+            name: "express loading...",
             path: "images/logos/express.png",
             num: "12"
         },
         {
-            name: "mongodb",
+            name: "mongodb loading...",
             path: "images/logos/mongodb.png",
             num: "13"
-        },
-        {
-            name: "mongoose",
-            path: "images/logos/mongoose.png",
-            num: "14"
         }
     ]
 };

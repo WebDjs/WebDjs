@@ -18,7 +18,9 @@ module.exports = {
             });
     },
     postTagNotLogged: (req, res) => {
-        termsTag = req.body.data;
+        tag = req.body.data;
+        let len = tag.length - 11;
+        termsTag = tag.substr(0, len);
         currentTerm = {};
 
         res.render("dict-not-logged", { logoes: constantz.logos, terms: terms, currentTerm: currentTerm });

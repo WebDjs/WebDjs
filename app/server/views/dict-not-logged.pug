@@ -10,7 +10,7 @@ block main-content
   br
   div
     .container-fluid
-  .row.content
+  .row.content(style="margin-left: 5px")
     .col-sm-3
       .input-group.search
         input#search-not-logged.form-control(type='text', placeholder='Search...')
@@ -30,9 +30,12 @@ block main-content
       .row
         .col-md-6
           textarea#term-definition.text= currentTerm.description
-        .col-md-6(style='font-size: 22px; color: gray; font-weight: bold;')
-          | Examples:
-          #term-examples.text
+        .col-md-6
+          img(src=currentTerm.image, alt="image info", style="height: 360px")
       .row
-        .col-md-12(style='margin-top: -15px;')
+        .col-md-6(style='margin-top: -15px;')
+          br
           a#term-more.links(href=currentTerm.info, target='_blank') More information
+        .col-md-6(style='margin-top: -15px;')
+          br
+          a#examples.links(href=currentTerm.info, target='_blank') Examples

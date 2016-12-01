@@ -31,11 +31,11 @@ block main-content
         .col-md-6
           textarea#term-definition.text= currentTerm.description
         .col-md-6
-          img(src=currentTerm.image, alt="image info", style="height: 360px")
+          img(src=currentTerm.image, alt="image info", style="width: 440px; height: 360px")
       .row
         .col-md-6(style='margin-top: -15px;')
           br
           a#term-more.links(href=currentTerm.info, target='_blank') More information
         .col-md-6(style='margin-top: -15px;')
           br
-          a#examples.links(href=currentTerm.info, target='_blank') Examples
+          a#examples.links(href=currentTerm.examples, target='_blank') Examples

@@ -21,7 +21,7 @@ block main-content
       .row
         .add-menu.dropup
           a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Add
-          .dropdown-menu(style='min-width: 100%; max-width: 100%; min-height: 420px; max-height: 420px; font-size: 28px;')
+          .dropdown-menu(style='min-width: 100%; max-width: 100%; min-height: 400px; max-height: 495px; font-size: 28px;')
             form#add-form(method='post', action='/add')
               label.add-label(for='tb-title', style='margin-left: 1%')
                 h5 Title:
@@ -47,11 +47,16 @@ block main-content
                 h5 Description:
               textarea#tb-description.form-control(name='description', type='text', placeholder='Description of the term...', style='min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%')
               label.add-label(for='tb-example', style='margin-left: 1%')
-                h5 Examples (set urls separated with space):
-              input#tb-example.form-control(name='examples', type='url', placeholder='http://pastebin.com   http://www.github.com', style='min-width: 98%; max-width: 98%; margin: 1%')
+                h5 Examples (set an url):
+              input#tb-example.form-control(name='examples', type='url', placeholder='http://www.github.com', style='min-width: 98%; max-width: 98%; margin: 1%')
               label.add-label(for='tb-info', style='margin-left: 1%')
                 h5 More information link (set an url):
+              
               input#tb-info.form-control(name='info', type='url', placeholder='http://www.w3schools.com', style='min-width: 98%; max-width: 98%; margin: 1%')
+              label.add-label(for='tb-image-info', style='margin-left: 1%')
+                h5 Image info (set an url):
+              input#tb-image-info.form-control(name='image', type='url', placeholder='http://www.picture-organic-clothing.com/', style='min-width: 98%; max-width: 98%; margin: 1%')
+              
               input#btn-add-item.btn.btn-default.btn-md(type='submit', value='Save', style='min-width: 93%')
           a#dict-delete.btn.btn-danger.col-md-3(href='#') Delete
           a#dict-edit.btn.btn-success.col-md-3(href='#') Edit

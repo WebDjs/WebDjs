@@ -5,7 +5,11 @@ block main-content
         div.logosContainer
             each logo in logos
                 div.logoContainerHome
-                    a.logoLink(href="/dict-not-logged")
+                    div.logoForNow
                         img.logoImgHome(src= logo.path, alt= logo.name)
+                    div.imgDescription
+                        a.logoLink(href="/dict-not-logged")
+                            div.homeImgContent
+                                h1 = logo.name
+                                p = logo.path
     br
-            

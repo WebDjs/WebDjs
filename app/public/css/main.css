@@ -130,17 +130,36 @@ footer {
 }
 
 .logoContainerHome {
+    position: relative;
+    height: 17%;
+    width: 17%;
+    padding: 1ex;
     border: 2px solid black;
     border-radius: 3px;
+    margin-left: 4px;
     display: inline-block;
-    min-width: 22em;
-    max-width: 22em;
-    min-height: 21em;
 }
 
-.logoContainerHome:hover {
-    background-color: lightgray;
-    opacity: 0.2
+.imgDescription {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: lightgray;
+    color: black;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+.logoContainerHome:hover .imgDescription {
+    visibility: visible;
+    opacity: 0.8;
 }
 
 .logoContainer {
@@ -175,7 +194,7 @@ footer {
 
 .logoInfo{
     position: absolute;
-     background-color: red; 
+     background-color: red;
      margin-top: -215px;
      width: 23%;
      padding: 1%

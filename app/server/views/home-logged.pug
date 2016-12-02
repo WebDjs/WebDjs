@@ -1,0 +1,16 @@
+extends shared/layout-logged
+
+block main-content
+    div(style="padding-left: 20px")
+        div.logosContainer
+            each logo in logos
+                div.logoContainerHome
+                    div.logoForNow
+                        img.logoImgHome(src= logo.path, alt= logo.name)
+                    div.imgDescription
+                        a.logoLink(href="/dict")
+                            div.homeImgContent
+                                h2=logo.title
+                                br
+                                p=logo.description
+    br

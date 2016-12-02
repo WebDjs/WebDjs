@@ -12,14 +12,11 @@ let requester = {
     }
 }
 
-let altValue,
-    currentTitle;
-
 //===========================================
 
 $(".logoLink").on("click", function () {
 
-    altValue = $(this).children("img").attr("alt");
+    let altValue = $(this).children("img").attr("alt");
 
     $("#obj-title").html(altValue.toUpperCase());
 
@@ -28,13 +25,12 @@ $(".logoLink").on("click", function () {
 
 $(".current-term-title").on("click", function () {
 
-    currentTitle = $(this).text();
+    let currentTitle = $(this).text();
 
     requester.post("/dict-current-title", currentTitle);
 });
 
 //===========================================
-
 
 $("#add-form").on("click", (event) => {
     event.stopPropagation();

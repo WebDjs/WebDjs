@@ -24,15 +24,9 @@ module.exports = {
                     notifier.error(err.toString());
                 }
                 fs.readFile("./server/common/username.txt", (err, data) => {
-                    let dataUsername = data.toString(),
-                        dataObj = {
-                            name: dataUsername,
-                            logoes: constantz.logos,
-                            terms: [],
-                            currentTerm: {}
-                        };
-                        
-                    res.render("dict", dataObj);
+                    let dataUsername = data.toString();
+
+                    res.render("home-logged", { name: dataUsername, logos: constantz.logos });
                 });
             })
         });

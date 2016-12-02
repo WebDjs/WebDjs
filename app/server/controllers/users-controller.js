@@ -37,14 +37,8 @@ module.exports = {
                     }
                     else {
                         fs.readFile("./server/common/username.txt", (err, data) => {
-                            let dataObject = {
-                                logoes: constantz.logos,
-                                name: data.toString(),
-                                terms: [],
-                                currentTerm: {}
-                            }
 
-                            res.render("dict", dataObject);
+                            res.render("home-logged", { name: data.toString(), logos: constantz.logos });
                             notifier.success("User registered!");
                         });
                     }

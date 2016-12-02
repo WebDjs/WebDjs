@@ -2,40 +2,39 @@ extends shared/layout
 
 block main-content
   div(style="padding-left: 20px")
-      div.logosContainer
-          each logo in logoes
-              div.logoContainer
-                  a.logoLink
-                      img.logoImg(src= logo.path, alt= logo.name)
+    div.logosContainer
+      each logo in logoes
+        div.logoContainer
+          a.logoLink
+            img.logoImg(src= logo.path, alt= logo.name)
   br
   div
     .container-fluid
   .row.content(style="margin-left: 5px")
     .col-sm-3
       .input-group.search
-        input#search-not-logged.form-control(type='text', placeholder='Search...')
+        input.form-control(type='text', placeholder='Search...')
         span.input-group-btn
           button.btn.btn-default(type='button')
             span.glyphicon.glyphicon-search
-      ul#terms.nav.nav-pills.nav-stacked.items-list
+      ul.nav.nav-pills.nav-stacked.items-list
         each term in terms
           li
             a.current-term-title= term.title
-         
       hr
     .col-sm-9
-      #title
-        #title-value
-          p#term-name= currentTerm.title
+      .title
+        .title-value
+          p.term-name= currentTerm.title
       .row
         .col-md-6
-          textarea#term-definition.text= currentTerm.description
+          textarea.term-definition.text= currentTerm.description
         .col-md-6
           img(src=currentTerm.image, alt="image info", style="width: 440px; height: 360px")
       .row
         .col-md-6(style='margin-top: -15px;')
           br
-          a#term-more.links(href=currentTerm.info, target='_blank') More information
+          a.term-more.links(href=currentTerm.info, target='_blank') More information
         .col-md-6(style='margin-top: -15px;')
           br
-          a#examples.links(href=currentTerm.examples, target='_blank') Examples
+          a.examples.links(href=currentTerm.examples, target='_blank') Examples

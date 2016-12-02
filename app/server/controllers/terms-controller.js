@@ -4,7 +4,11 @@ let data = require("../data"),
     notifier = require("../utilities/notifier"),
     termsTag = "",
     terms = [],
-    currentTerm = {};
+    currentTerm = {},
+    dataObj = {},
+    tag;
+
+let dataUser;
 
 module.exports = {
     postTitleNotLogged: (req, res) => {
@@ -13,30 +17,77 @@ module.exports = {
         data.terms.getTermsByTitle(titleValue)
             .then((result) => {
                 currentTerm = result[0];
-
-                res.redirect("/dict-not-logged");
             });
+
+        fs.readFile("./server/common/username.txt", (err, data) => {
+            dataUser = data.toString();
+        });
+
+        if (dataUser === "") {
+            res.redirect("/dict-not-logged");
+        }
+        else {
+            res.redirect("/dict");
+        }
     },
     postTagNotLogged: (req, res) => {
         tag = req.body.data;
+
+        // " loading...".length = 11
         let len = tag.length - 11;
         termsTag = tag.substr(0, len);
         currentTerm = {};
 
-        res.render("dict-not-logged", { logoes: constantz.logos, terms: terms, currentTerm: currentTerm });
+        fs.readFile("./server/common/username.txt", (err, data) => {
+            dataUser = data.toString();
+        });
+
+        if (dataUser === "") {
+            console.log(dataUser);
+
+            dataObj = {
+                logoes: constantz.logos,
+                terms: terms,
+                currentTerm: currentTerm
+            }
+            res.render("dict-not-logged", dataObj);
+        }
+        else {
+            console.log(dataUser);
+
+            dataObj = {
+                name: dataUser,
+                logoes: constantz.logos,
+                terms: terms,
+                currentTerm: currentTerm
+            };
+
+            res.render("dict", dataObj);
+        }
     },
     getDictNotLogged: (req, res) => {
-        
+
         data.terms.getTermsByTag(termsTag)
             .then((result) => {
                 terms = result;
-                
-                res.render("dict-not-logged", { logoes: constantz.logos, terms: terms, currentTerm: currentTerm });
+                dataObj = {
+                    logoes: constantz.logos,
+                    terms: terms,
+                    currentTerm: currentTerm
+                }
+
+                res.render("dict-not-logged", dataObj);
             });
     },
     getDict: (req, res) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
-            res.render("dict", { name: data.toString(), logoes: constantz.logos });
+            dataObj = {
+                name: data.toString(),
+                logoes: constantz.logos,
+                terms: terms,
+                currentTerm: currentTerm
+            };
+            res.render("dict", dataObj);
         });
     },
     postTerm: (req, res) => {

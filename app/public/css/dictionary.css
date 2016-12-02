@@ -1,9 +1,40 @@
+.title {
+    max-height: 45px;
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: left;
+    color: steelblue;
+    margin-top: -18px
+}
+
+.title-value {
+    margin-top: 5px
+}
+
+.text {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 360px;
+    max-height: 360px;
+    font-size: 22px;
+    color: steelblue;
+}
+
+.links {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50px;
+    max-height: 50px;
+    font-size: 24px;
+    color: gray;
+}
+
 .term-value:hover {
     font-size: 22px;
     font-weight: bold
 }
 
-#term-definition {
+.term-definition {
     text-align: justify
 }
 
@@ -54,7 +85,7 @@ ul {
     margin-left: 5%
 }
 
-#title {
+.title {
     max-height: 45px;
     font-size: 28px;
     font-weight: bolder;
@@ -63,7 +94,7 @@ ul {
     margin-top: -18px
 }
 
-#title-value {
+.title-value {
     margin-top: 5px
 }
 

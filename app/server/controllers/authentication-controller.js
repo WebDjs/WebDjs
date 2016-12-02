@@ -24,7 +24,15 @@ module.exports = {
                     notifier.error(err.toString());
                 }
                 fs.readFile("./server/common/username.txt", (err, data) => {
-                    res.render("dict", { logoes: constantz.logos, name: data.toString() });
+                    let dataUsername = data.toString(),
+                        dataObj = {
+                            name: dataUsername,
+                            logoes: constantz.logos,
+                            terms: [],
+                            currentTerm: {}
+                        };
+                        
+                    res.render("dict", dataObj);
                 });
             })
         });
@@ -32,7 +40,7 @@ module.exports = {
         auth(req, res, next);
     },
     logout: function (req, res, next) {
-        //fs.writeFile(pathToUsername, "");
+        fs.writeFile(pathToUsername, "");
         req.logout();
         res.redirect("/");
     },

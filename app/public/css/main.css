@@ -81,37 +81,6 @@ main {
     margin-left: 5%
 }
 
-#title {
-    max-height: 45px;
-    font-size: 28px;
-    font-weight: bolder;
-    text-align: left;
-    color: steelblue;
-    margin-top: -18px
-}
-
-#title-value {
-    margin-top: 5px
-}
-
-.text {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 360px;
-    max-height: 360px;
-    font-size: 22px;
-    color: steelblue;
-}
-
-.links {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 50px;
-    max-height: 50px;
-    font-size: 24px;
-    color: gray;
-}
-
 footer {
     min-height: 80px;
     background-color: black;
@@ -164,8 +133,9 @@ footer {
     border: 2px solid black;
     border-radius: 3px;
     display: inline-block;
-    min-width: 17%;
-    max-width: 17%;
+    min-width: 22em;
+    max-width: 22em;
+    min-height: 21em;
 }
 
 .logoContainerHome:hover {
@@ -193,10 +163,20 @@ footer {
 }
 
 .logoImgHome {
-    width: 99%;
-    height: 170px;
+    margin-left: 14%;
+    margin-top: 14%;
+    width: 70%;
+    height: 175px;
 }
 
 .info:hover {
     visibility: visible
+}
+
+.logoInfo{
+    position: absolute;
+     background-color: red; 
+     margin-top: -215px;
+     width: 23%;
+     padding: 1%
 }

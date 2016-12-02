@@ -2,22 +2,27 @@ extends shared/layout-logged
 
 block main-content
   div(style="padding-left: 20px")
-      div.logosContainer
-          each logo in logoes
-              div.logoContainer
-                  a.logoLink
-                      img.logoImg(src= logo.path, alt= logo.name)
+    div.logosContainer
+      each logo in logoes
+        div.logoContainer
+          a.logoLink
+            img.logoImg(src= logo.path, alt= logo.name)
   br
   div
     .container-fluid
-  .row.content
+  .row.content(style="margin-left: 5px")
     .col-sm-3
       .input-group.search
         input.form-control(type='text', placeholder='Search...')
         span.input-group-btn
           button.btn.btn-default(type='button')
             span.glyphicon.glyphicon-search
-      ul#terms.nav.nav-pills.nav-stacked.items-list
+      ul.nav.nav-pills.nav-stacked.items-list
+        each term in terms
+          li
+            a.current-term-title-logged= term.title
+         
+      hr
       .row
         .add-menu.dropup
           a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Add
@@ -42,7 +47,6 @@ block main-content
                   option nodejs
                   option express
                   option mongodb
-                  option mongoose
               label.add-label(for='tb-description', style='margin-left: 1%')
                 h5 Description:
               textarea#tb-description.form-control(name='description', type='text', placeholder='Description of the term...', style='min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%')
@@ -62,15 +66,18 @@ block main-content
           a#dict-edit.btn.btn-success.col-md-3(href='#') Edit
       hr
     .col-sm-9
-      #title
-        #title-value
-          p#term-name
+      .title
+        .title-value
+          p.term-name= currentTerm.title
       .row
         .col-md-6
-          textarea#term-definition.text
-        .col-md-6(style='font-size: 22px; color: gray; font-weight: bold;')
-          | Examples:
-          #term-examples.text
+          textarea.term-definition.text= currentTerm.description
+        .col-md-6
+          img(src=currentTerm.image, alt="image info", style="width: 440px; height: 360px")
       .row
-        .col-md-12(style='margin-top: -15px;')
-          a#term-more.links(href='#', target='_blank') More information
+        .col-md-6(style='margin-top: -15px;')
+          br
+          a.term-more.links(href=currentTerm.info, target='_blank') More information
+        .col-md-6(style='margin-top: -15px;')
+          br
+          a.examples.links(href=currentTerm.examples, target='_blank') Examples

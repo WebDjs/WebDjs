@@ -6,9 +6,17 @@ let data = require("../data"),
     terms = [],
     currentTerm = {},
     dataObj = {},
-    tag;
+    tag,
+    dataUser;
 
-let dataUser;
+function dataUsername() {
+    return new Promise((resolve, reject) => {
+        fs.readFile("./server/common/username.txt", (err, data) => {
+            resolve(data.toString());
+            reject(err);
+        });
+    })
+}
 
 module.exports = {
     postTitleNotLogged: (req, res) => {
@@ -19,16 +27,7 @@ module.exports = {
                 currentTerm = result[0];
             });
 
-        fs.readFile("./server/common/username.txt", (err, data) => {
-            dataUser = data.toString();
-        });
-
-        if (dataUser === "") {
-            res.redirect("/dict-not-logged");
-        }
-        else {
-            res.redirect("/dict");
-        }
+        res.redirect("/dict-not-logged");
     },
     postTagNotLogged: (req, res) => {
         tag = req.body.data;
@@ -37,36 +36,16 @@ module.exports = {
         let len = tag.length - 11;
         termsTag = tag.substr(0, len);
         currentTerm = {};
+        dataObj = {
+            name: dataUser,
+            logoes: constantz.logos,
+            terms: terms,
+            currentTerm: currentTerm
+        };
 
-        fs.readFile("./server/common/username.txt", (err, data) => {
-            dataUser = data.toString();
-        });
-
-        if (dataUser === "") {
-            console.log(dataUser);
-
-            dataObj = {
-                logoes: constantz.logos,
-                terms: terms,
-                currentTerm: currentTerm
-            }
-            res.render("dict-not-logged", dataObj);
-        }
-        else {
-            console.log(dataUser);
-
-            dataObj = {
-                name: dataUser,
-                logoes: constantz.logos,
-                terms: terms,
-                currentTerm: currentTerm
-            };
-
-            res.render("dict", dataObj);
-        }
+        res.render("dict-not-logged", dataObj);
     },
     getDictNotLogged: (req, res) => {
-
         data.terms.getTermsByTag(termsTag)
             .then((result) => {
                 terms = result;
@@ -80,15 +59,21 @@ module.exports = {
             });
     },
     getDict: (req, res) => {
-        fs.readFile("./server/common/username.txt", (err, data) => {
-            dataObj = {
-                name: data.toString(),
-                logoes: constantz.logos,
-                terms: terms,
-                currentTerm: currentTerm
-            };
-            res.render("dict", dataObj);
-        });
+        data.terms.getTermsByTag(termsTag)
+            .then((result) => {
+                terms = result;
+                dataUser = dataUsername()
+                    .then(data => {
+                        dataObj = {
+                            name: data,
+                            logoes: constantz.logos,
+                            terms: terms,
+                            currentTerm: currentTerm
+                        }
+
+                        res.render("dict", dataObj);
+                    })
+            });
     },
     postTerm: (req, res) => {
         let newTerm = req.body;

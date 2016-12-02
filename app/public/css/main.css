@@ -131,12 +131,14 @@ footer {
 
 .logoContainerHome {
     position: relative;
-    height: 17%;
-    width: 17%;
+    min-width: 21em;
+    max-width: 21em;
+    min-height: 20em;
     padding: 1ex;
     border: 2px solid black;
     border-radius: 3px;
     margin-left: 4px;
+    margin-bottom: 4px;
     display: inline-block;
 }
 

@@ -13,9 +13,9 @@ block main-content
   .row.content(style="margin-left: 5px")
     .col-sm-3
       .input-group.search
-        input.form-control(type='text', placeholder='Search...')
+        input.form-control(type="text", placeholder="Search...")
         span.input-group-btn
-          button.btn.btn-default(type='button')
+          button.btn.btn-default(type="button")
             span.glyphicon.glyphicon-search
       ul.nav.nav-pills.nav-stacked.items-list
         each term in terms
@@ -32,9 +32,9 @@ block main-content
         .col-md-6
           img(src=currentTerm.image, alt="image info", style="width: 440px; height: 360px")
       .row
-        .col-md-6(style='margin-top: -15px;')
+        .col-md-6(style="margin-top: -15px;")
           br
-          a.term-more.links(href=currentTerm.info, target='_blank') More information
-        .col-md-6(style='margin-top: -15px;')
+          a.term-more.links(href=currentTerm.info, target="_blank") More information
+        .col-md-6(style="margin-top: -15px;")
           br
-          a.examples.links(href=currentTerm.examples, target='_blank') Examples
+          a.examples.links(href=currentTerm.examples, target="_blank") Examples

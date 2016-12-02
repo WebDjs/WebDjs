@@ -60,7 +60,7 @@ module.exports = {
             title: "HTML",
             name: "html loading...",
             path: "images/logos/html.png",
-            description: "",
+            description: "HyperText Markup Language is the standard markup language for creating web pages and web applications. ",
             num: "0"
         },
         {

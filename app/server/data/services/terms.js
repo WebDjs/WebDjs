@@ -14,7 +14,7 @@ module.exports = {
     },
     getTermsByTag(tag) {
         return new Promise((resolve, reject) => {
-            Term.find({ tag: tag }, (err, terms) => {
+            Term.find({ tag: tag }).sort({ title: 1 }).exec((err, terms) => {
                 if (err) {
                     return reject(err);
                 }

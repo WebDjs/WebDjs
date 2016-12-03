@@ -36,6 +36,16 @@ $("#add-form").on("click", (event) => {
     event.stopPropagation();
 });
 
-$("#search-not-logged").on("change", () => {
-    let sample = $(this).text();
+$(".search-space").on("keyup", function() {
+    let $this = $(this);
+    let sample = $this.val();
+
+    console.log(sample);
+
+    let termsList = $(".items-list").each((obj) => {
+        return obj.toString(); 
+    });
+
+    console.log(termsList);
+
 });

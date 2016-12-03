@@ -14,6 +14,9 @@ block main-content
     .col-sm-3
       .input-group.search
         input.form-control.search-space(type="text", placeholder="Search...")
+        span.input-group-btn
+          button.btn.btn-default(type="button")
+            span.glyphicon.glyphicon-search
       ul.nav.nav-pills.nav-stacked.items-list
         each term in terms
           li

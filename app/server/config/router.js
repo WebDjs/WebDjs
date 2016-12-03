@@ -16,9 +16,7 @@ module.exports = function (app) {
     app.get("/logout", controllers.authentication.logout);
 
     // logged user routes
-    app.get("/logged", (req, res) => {
-        res.redirect("/dict");
-    });
+    app.get("/logged", controllers.main.homeLogged);
 
     app.get("/profile", controllers.users.getProfile);
 

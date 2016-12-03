@@ -36,16 +36,12 @@ $("#add-form").on("click", (event) => {
     event.stopPropagation();
 });
 
-$(".search-space").on("keyup", function() {
+$(".search-space").on("keyup", function () {
     let $this = $(this);
     let sample = $this.val();
 
     console.log(sample);
 
-    let termsList = $(".items-list").each((obj) => {
-        return obj.toString(); 
-    });
-
+    let termsList = $(".items-list");
     console.log(termsList);
-
 });

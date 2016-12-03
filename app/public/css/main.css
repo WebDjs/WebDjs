@@ -12,8 +12,9 @@ nav {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
 }
 
-a {
-    font-size: 16px
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
 }
 
 .term-value:hover {
@@ -140,6 +141,7 @@ footer {
     margin-left: 4px;
     margin-bottom: 4px;
     display: inline-block;
+    text-decoration: none
 }
 
 .imgDescription {
@@ -148,8 +150,11 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 3px;
+    font-weight: bold;
     background: lightgray;
     color: black;
+    text-decoration: none;
     visibility: hidden;
     opacity: 0;
     text-align: center;
@@ -159,9 +164,25 @@ footer {
     transition: opacity 500ms;
 }
 
+.logoContainerHome:hover {
+    opacity: 0.9;
+    text-decoration: none
+}
+
 .logoContainerHome:hover .imgDescription {
     visibility: visible;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
     opacity: 0.9;
+}
+
+.logoContainerHome:hover .logo-description {
+    padding: 3px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
 }
 
 .logoContainer {
@@ -172,10 +193,12 @@ footer {
     display: inline-block;
     min-width: 6em;
     max-width: 6em;
+    text-decoration: none
 }
 
 .logoContainer:hover {
-    background-color: lightgray
+    background-color: lightgray;
+    text-decoration: none
 }
 
 .logoImg {
@@ -191,13 +214,15 @@ footer {
 }
 
 .info:hover {
-    visibility: visible
+    visibility: visible;
+    text-decoration: none
 }
 
-.logoInfo{
+.logoInfo {
     position: absolute;
-     background-color: red;
-     margin-top: -215px;
-     width: 23%;
-     padding: 1%
+    background-color: red;
+    margin-top: -215px;
+    width: 23%;
+    padding: 1%;
+    text-decoration: none
 }

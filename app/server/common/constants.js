@@ -81,7 +81,7 @@ module.exports = {
             title: "LESS",
             name: "less loading...",
             path: "images/logos/less.png",
-            description: "Dynamic style sheet language that can be compiled into CSS and run on the client side or server side.[",
+            description: "Dynamic style sheet language that can be compiled into CSS and run on the client side or server side.",
             num: "3"
         },
         {

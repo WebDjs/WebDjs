@@ -39,9 +39,36 @@ $("#add-form").on("click", (event) => {
 $(".search-space").on("keyup", function () {
     let $this = $(this);
     let sample = $this.val();
+    let list = $("ul.nav.nav-pills.nav-stacked.items-list li a");
 
-    console.log(sample);
+    for (let i = 0; i < list.length; i += 1) {
+        let currentListValue = $(list[i]).html();
 
-    let termsList = $(".items-list");
-    console.log(termsList);
+        if (sample.length !== "" && isMatching(sample, currentListValue)) {
+            $(list[i]).addClass("active");
+            break;
+        }
+        $("body").removeClass("active");
+    }
 });
+
+$(".search-space").on("change", function () {
+  window.location.reload();
+});
+
+function isMatching(sample, listWord) {
+    sample = sample.toUpperCase();
+    listWord = listWord.toUpperCase();
+
+    if (listWord.length < sample.length) {
+        return false;
+    }
+
+    for (let j = 0; j < sample.length; j += 1) {
+        if (listWord[j] !== sample[j]) {
+            return false;
+        }
+    }
+
+    return true;
+}

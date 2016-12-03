@@ -190,6 +190,7 @@ footer {
     border: 2px solid black;
     border-radius: 3px;
     margin-left: 4px;
+    margin-bottom: 4px;
     display: inline-block;
     min-width: 6em;
     max-width: 6em;
@@ -215,14 +216,5 @@ footer {
 
 .info:hover {
     visibility: visible;
-    text-decoration: none
-}
-
-.logoInfo {
-    position: absolute;
-    background-color: red;
-    margin-top: -215px;
-    width: 23%;
-    padding: 1%;
     text-decoration: none
 }

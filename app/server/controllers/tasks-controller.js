@@ -5,13 +5,13 @@ const fs = require("fs");
 module.exports = {
     getTasks: (req, res, next) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
-            res.render("tasks", { name: data.toString() });
+            res.render("tasks", { name: data.toString(), logos: constantz.logos });
         });
     },
     singleTask: (req, res, next) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
             console.log('hi');
-            
+
             res.render("single-task", { name: data.toString() });
         });
     }

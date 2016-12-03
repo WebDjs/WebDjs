@@ -5,10 +5,10 @@ block main-content
         div.logosContainer
             each logo in logos
                 div.logoContainerHome
-                    div.logoForNow
+                    div.logoLink
                         img.logoImgHome(src= logo.path, alt= logo.name)
-                    div.imgDescription
-                        a.logoLink(href="/dict")
+                    div.imgDescription.logoLink
+                        a.logoLinkInline(href="/dict")
                             div.homeImgContent
                                 h2=logo.title
                                 br

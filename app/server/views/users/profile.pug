@@ -1,21 +1,110 @@
 extends ../shared/layout-logged
 
 block main-content
-    div(style="padding-left: 10%")
-    h1
-        | Hi, 
-        strong #{name}
-    br
-    h2 Your results:
-    h2
-        | Status: 
-        em
-        b novice
-        |  / advanced / pro
+
+    style.
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 60%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    div(style="margin-left: 5%")
+        h1
+            | User: 
+            strong #{name}
+        br
+        h2
+            | Status: 
+            em
+            b novice
+            |  / advanced / pro
+        h2 Best results:
+        
+        table
+            tr
+                th
+                th Test
+                th Tasks
+            tr
+                td Alfreds Futterkiste
+                td /100
+                td /300
+            tr
+                td HTML
+                td /100
+                td /300
+            tr
+                td CSS
+                td /100
+                td /300
+            tr
+                td Bootstrap
+                td /100
+                td /300
+            tr
+                td LESS
+                td /100
+                td /300
+            tr
+                td SASS
+                td /100
+                td /300
+            tr
+                td Stylus
+                td /100
+                td /300
+            tr
+                td JavaScript
+                td /100
+                td /300
+            tr
+                td JQuery
+                td /100
+                td /300
+            tr
+                td TypeScript
+                td /100
+                td /300
+            tr
+                td Angular
+                td /100
+                td /300
+            tr
+                td React
+                td /100
+                td /300
+            tr
+                td NodeJS
+                td /100
+                td /300
+            tr
+                td Express
+                td /100
+                td /300
+            tr
+                td MongoDB
+                td /100
+                td /300
+
     br
     .row
         .add-menu.dropup
-        h3 Test questions:
-        br
-        a.btn.btn-primary.col-md-3(href="#/suggest-question") Suggest
-        a.btn.btn-success.col-md-3(href="#/correct-question") Correct
+            h3 Test questions:
+            br
+            a.btn.btn-primary.col-md-3(href="#/suggest-question") Suggest
+            a.btn.btn-success.col-md-3(href="#/correct-question") Correct
+    .row
+        .add-menu.dropup
+            h3 Tasks:
+            br
+            a.btn.btn-primary.col-md-3(href="#/suggest-question") Suggest
+            a.btn.btn-success.col-md-3(href="#/correct-question") Correct
+    br

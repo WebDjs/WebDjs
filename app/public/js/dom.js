@@ -23,9 +23,11 @@ $(".logoLink").on("click", function () {
     requester.post("/dict-tag", altValue);
 });
 
-$(".current-term-title").on("click", function () {
+//===========================================
 
-    let currentTitle = $(this).text();
+$(".current-term-title").on("click", function () {
+    let currentItem = $(this);
+    let currentTitle = currentItem.text();
 
     requester.post("/dict-current-title", currentTitle);
 });
@@ -36,7 +38,11 @@ $("#add-form").on("click", (event) => {
     event.stopPropagation();
 });
 
+//===========================================
+
 $(".search-space").on("keyup", function () {
+    $("body").removeClass("active");
+
     let $this = $(this);
     let sample = $this.val();
     let list = $("ul.nav.nav-pills.nav-stacked.items-list li a");
@@ -44,16 +50,16 @@ $(".search-space").on("keyup", function () {
     for (let i = 0; i < list.length; i += 1) {
         let currentListValue = $(list[i]).html();
 
-        if (sample.length !== "" && isMatching(sample, currentListValue)) {
+        if (sample !== "" && isMatching(sample, currentListValue)) {
             $(list[i]).addClass("active");
+            $(list[i]).attr('selected','selected');
             break;
         }
-        $("body").removeClass("active");
     }
 });
 
 $(".search-space").on("change", function () {
-  window.location.reload();
+    window.location.reload(true);
 });
 
 function isMatching(sample, listWord) {
@@ -72,3 +78,5 @@ function isMatching(sample, listWord) {
 
     return true;
 }
+
+//===========================================

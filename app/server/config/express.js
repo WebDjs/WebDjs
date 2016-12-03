@@ -31,7 +31,6 @@ module.exports = function (app, config) {
     // Passport init
     app.use(passport.initialize());
     app.use(passport.session());
-    app.use(cors());
 
     // Set Static Resources
     app.use(express.static(config.rootPath + "/public"));

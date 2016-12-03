@@ -12,13 +12,11 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "bower": "^1.8.0",
-    "connect-flash": "^0.1.1",
+    "chai": "^3.5.0",
     "cookie-parser": "^1.4.3",
-    "cors": "^2.8.1",
     "express": "^4.14.0",
-    "express-flash": "0.0.2",
     "express-session": "^1.14.2",
-    "express-toastr": "^2.0.2",
+    "mocha": "^3.1.0",
     "mongodb": "^2.2.11",
     "mongoose": "^4.6.8",
     "node-notifier": "^4.6.1",
@@ -27,8 +25,6 @@
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
-    "mocha": "^3.1.0",
-    "chai": "^3.5.0",
     "sinon": "^1.17.5"
   }
 }

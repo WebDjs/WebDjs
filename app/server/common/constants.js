@@ -17,42 +17,6 @@ module.exports = {
                 value: true
             }
         ]
-    },
-    {
-        question: "2. What does HTML stand for?",
-        answers: [
-            {
-                answer: "Hyperlinks and Text Markup Language",
-                value: false
-            }, {
-                answer: "Home Tool Markup Language",
-                value: false
-            }, {
-                answer: "Hyperlinks Tool Markup Language",
-                value: false
-            }, {
-                answer: "Hyper Text Markup Language",
-                value: true
-            }
-        ]
-    },
-    {
-        question: "3. What does HTML stand for?",
-        answers: [
-            {
-                answer: "Hyperlinks and Text Markup Language",
-                value: false
-            }, {
-                answer: "Home Tool Markup Language",
-                value: false
-            }, {
-                answer: "Hyperlinks Tool Markup Language",
-                value: false
-            }, {
-                answer: "Hyper Text Markup Language",
-                value: true
-            }
-        ]
     }],
     types: [{
         test: "test"

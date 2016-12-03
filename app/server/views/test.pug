@@ -2,6 +2,11 @@ extends shared/layout-logged
 
 block main-content 
 
+  style.
+    td.td-quest {
+      width: 200px
+    }
+
   div(style="padding-left: 20px")
     div.logosContainer
       each logo in logos
@@ -24,17 +29,111 @@ block main-content
     button(onclick = "timeCounter()")
       img(src="", alt="START NOW", width="80px", height="84px")
     span
-      h1(style="display: inline-block; padding-left: 8em;")  Test      
+      h1(style="display: inline-block; padding-left: 3em;")  Test     
     span
-      h3#timer(style="display: inline-block; margin-left: 9em;")
-    dl.items-list(style="max-width: 70%; padding-left: 5px;")
-      br
-      each question in questions
-        dt= question.question
-          each answer in question.answers
-            dd
-              input(id=answer.answer name=question.question type="radio" style="margin-left: 1em") 
-              labal(for=answer.answer style="margin-left: 1em")= answer.answer 
+      h3#timer(style="display: inline-block; margin-left: 7em;")
+    .row
+      .col-md-6
+        dl.items-list(style="max-width: 70%; padding-left: 5px;")
+          br
+          each question in questions
+            dt= question.question
+              each answer in question.answers
+                dd
+                  input(id=answer.answer name=question.question type="radio" style="margin-left: 1em") 
+                  labal(for=answer.answer style="margin-left: 1em")= answer.answer 
+            br
+          br
+      .col-md-6
+        table
+          tr
+            td.td-quest.td-name(colspan="4")
+              label Questions:
+          br
+          tr
+            td.td-quest
+              button.buttons 01
+            td.td-quest
+              button.buttons 02
+            td.td-quest
+              button.buttons 03
+            td.td-quest
+              button.buttons 04
+            td.td-quest
+              button.buttons 05
+            td.td-quest
+              button.buttons 06
+            td.td-quest
+              button.buttons 07
+            td.td-quest
+              button.buttons 08
+            td.td-quest
+              button.buttons 09
+            td.td-quest
+              button.buttons 10
+          tr
+            td.td-quest
+              button.buttons 11
+            td.td-quest
+              button.buttons 12
+            td.td-quest
+              button.buttons 13
+            td.td-quest
+              button.buttons 14
+            td.td-quest
+              button.buttons 15
+            td.td-quest
+              button.buttons 16
+            td.td-quest
+              button.buttons 17
+            td.td-quest
+              button.buttons 18
+            td.td-quest
+              button.buttons 19
+            td.td-quest
+              button.buttons 20
+          tr
+            td.td-quest
+              button.buttons 21
+            td.td-quest
+              button.buttons 22
+            td.td-quest
+              button.buttons 23
+            td.td-quest
+              button.buttons 24
+            td.td-quest
+              button.buttons 25
+            td.td-quest
+              button.buttons 26
+            td.td-quest
+              button.buttons 27
+            td.td-quest
+              button.buttons 28
+            td.td-quest
+              button.buttons 29
+            td.td-quest
+              button.buttons 30
+          tr
+            td.td-quest
+              button.buttons 31
+            td.td-quest
+              button.buttons 32
+            td.td-quest
+              button.buttons 33
+            td.td-quest
+              button.buttons 34
+            td.td-quest
+              button.buttons 35
+            td.td-quest
+              button.buttons 36
+            td.td-quest
+              button.buttons 37
+            td.td-quest
+              button.buttons 38
+            td.td-quest
+              button.buttons 39
+            td.td-quest
+              button.buttons 40
         br
-      br
-      a.btn.btn-primary(href="#", style="display: block; margin: 0 auto; width: 30%; margin-bottom: 5px") Submit
+        br
+        a.btn.btn-primary(href="#", style="display: inline-block; width: 100px; margin-bottom: 5px; margin-left: 12em;") Submit 

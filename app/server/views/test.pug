@@ -1,28 +1,32 @@
 extends shared/layout-logged
 
-block main-content
-  div(style='padding-left: 20px; padding-top: 5px')
-    span
-      h3(style='display: inline-block')  Test      
-    span
-      h3#timer(style='display: inline-block') 60:00 min
-    span
-      button start
+block main-content 
 
-      dl.items-list(style='max-width: 70%; padding-left: 5px;')
-        br
-        dt Question?
-          dd
-            input(name='answer', type='radio') 
-            | Answer 1
-            br
-            input(name='answer', type='radio') 
-            | Answer 2 
-            br
-            input(name='answer', type='radio') 
-            | Answer 3
-            br
-            input(name='answer', type='radio') 
-            | Answer 4 
-      br       
-      a.btn.btn-primary(href='#', style='display: block; margin: 0 auto; width: 30%; margin-bottom: 5px') Submit
+  div(style="padding-left: 20px")
+    div.logosContainer
+      each logo in logos
+        div.logoContainer
+          a.logoLink
+            img.logoImg(src= logo.path, alt= logo.name)
+  br
+
+  div(style="padding-left: 20px; padding-top: 5px")
+    script(type="text/javascript").
+      function timeCounter(){   
+            return $("#timer").timer({
+            countdown: true,
+            duration: "60m00s",      // This will start the countdown from 3 mins 40 seconds
+            callback: function() {  // This will execute after the duration has elapsed
+                console.log("Time up!");
+            }
+        });
+      }
+    button(onclick = "timeCounter()")
+      img(src="", alt="100 questions for 60 min", width="80px", height="84px")
+    span
+      h1(style="display: inline-block; padding-left: 8em;")  Test      
+    span
+      h3#timer(style="display: inline-block")
+    dl.items-list(style="max-width: 70%; padding-left: 5px;")
+      br
+      a.btn.btn-primary(href="#", style="display: block; margin: 0 auto; width: 30%; margin-bottom: 5px") Submit

@@ -5,7 +5,7 @@ const fs = require("fs");
 module.exports = {
     getTest: (req, res, next) => {
         fs.readFile("./server/common/username.txt", (err, data) => {
-            res.render("test", { name: data.toString() });
+            res.render("test", { name: data.toString(), logos: constantz.logos });
         });
     }
 }

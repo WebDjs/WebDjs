@@ -15,7 +15,7 @@ block main-content
       function timeCounter(){   
             return $("#timer").timer({
             countdown: true,
-            duration: "60m00s",      // This will start the countdown from 3 mins 40 seconds
+            duration: "60m00s",      // This will start the countdown from 60 min back
             callback: function() {  // This will execute after the duration has elapsed
                 console.log("Time up!");
             }
@@ -28,5 +28,13 @@ block main-content
     span
       h3#timer(style="display: inline-block")
     dl.items-list(style="max-width: 70%; padding-left: 5px;")
+      br
+      each question in questions
+        dt= question.question
+          each answer in question.answers
+            dd
+              input(id=answer.answer name=question.question type="radio" style="margin-left: 1em") 
+              labal(for=answer.answer style="margin-left: 1em")= answer.answer 
+        br
       br
       a.btn.btn-primary(href="#", style="display: block; margin: 0 auto; width: 30%; margin-bottom: 5px") Submit

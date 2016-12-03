@@ -4,11 +4,11 @@ let requiredMessage = "{PATH} is required";
 
 module.exports.init = function() {
     let questionSchema = mongoose.Schema({
-        title: { type: String, required: requiredMessage },
-        description: { type: String, required: requiredMessage },
-        category: { type: String, required: requiredMessage },
-        date: { type: Date, required: requiredMessage },
-        creator: { type: String, required: requiredMessage }
+        question: { type: String },
+        answerA: { type: String },
+        answerB: { type: String },
+        answerC: { type: String },
+        answerD: { type: String },
     });
 
     let Question = mongoose.model("Question", questionSchema);

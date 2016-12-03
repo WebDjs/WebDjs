@@ -27,7 +27,7 @@ block main-content
         });
       }
     button(onclick = "timeCounter()")
-      img(src="", alt="START NOW", width="80px", height="84px")
+      img(src="images/start.jpg", alt="START NOW", width="80px", height="84px")
     span
       h1(style="display: inline-block; padding-left: 3em;")  Test     
     span
@@ -48,8 +48,7 @@ block main-content
         table
           tr
             td.td-quest.td-name(colspan="4")
-              label Questions:
-          br
+              h3 Questions:
           tr
             td.td-quest
               button.buttons 01
@@ -136,4 +135,49 @@ block main-content
               button.buttons 40
         br
         br
-        a.btn.btn-primary(href="#", style="display: inline-block; width: 100px; margin-bottom: 5px; margin-left: 12em;") Submit 
+        a.btn.btn-primary(href="#", style="display: inline-block; width: 100px; margin-bottom: 5px; margin-left: 17em;") Submit 
+        br
+        br
+        br
+        br
+        br
+        br
+        .row
+          .add-menu.dropup
+            a#dict-add.btn.btn-success.col-md-3.btn.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Add
+            .dropdown-menu(style="min-width: 93%; max-width: 93%; min-height: 400px; max-height: 495px; font-size: 28px;")
+              form#add-form(method='post', action='/add')
+                label.add-label(for='tb-title', style='margin-left: 1%')
+                  h5 Question:
+                .row(style="margin-left: 3px")
+                  input#tb-title.form-control.col-md-8(name='title', type='text', placeholder='Question...', style='min-width: 75%; max-width: 75%; margin: 1%')
+                  select.col-md-4(name="tag", style="margin-top: 5px; min-height: 30px; max-width: 18%; font-size: 18px")   
+                    option html
+                    option css
+                    option bootstrap
+                    option less
+                    option sass
+                    option stylus
+                    option js
+                    option jquery
+                    option ts
+                    option angular
+                    option react
+                    option nodejs
+                    option express
+                    option mongodb
+                label.add-label(for='tb-description', style='margin-left: 1%')
+                  h5 Answer a:
+                input#tb-description.form-control(name='description', type='text', placeholder='Answer...', style='min-width: 98%; max-width: 98%; margin: 1%')
+                label.add-label(for='tb-example', style='margin-left: 1%')
+                  h5 Answer b:
+                input#tb-description.form-control(name='description', type='text', placeholder='Answer...', style='min-width: 98%; max-width: 98%; margin: 1%')
+                label.add-label(for='tb-example', style='margin-left: 1%')
+                  h5 Answer c:
+                input#tb-description.form-control(name='description', type='text', placeholder='Answer...', style='min-width: 98%; max-width: 98%; margin: 1%')
+                label.add-label(for='tb-example', style='margin-left: 1%')
+                  h5 Answer d:
+                input#tb-description.form-control(name='description', type='text', placeholder='Answer...', style='min-width: 98%; max-width: 98%; margin: 1%')
+                label.add-label(for='tb-example', style='margin-left: 1%')
+                 
+                input#btn-add-item.btn.btn-default.btn-md(type='submit', value='Save', style='min-width: 22%')

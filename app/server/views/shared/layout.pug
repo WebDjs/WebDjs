@@ -1,13 +1,13 @@
 doctype html
 html(lang="en")
-  include head
+  include partials/head
 
   body#page
     #wrapper
       header#header
-      include nav
+      include partials/nav
       main
           block main-content
-      include footer
+      include partials/footer
 
-      include scripts
+      include partials/scripts

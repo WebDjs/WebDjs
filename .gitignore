@@ -29,3 +29,11 @@ build/Release
 
 # WebStorm .idea forlder
 .idea
+
+typings
+.eslintrc.js
+.gitignore
+LICENSE
+README
+README.md
+typings.json

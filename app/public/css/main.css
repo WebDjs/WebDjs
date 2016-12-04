@@ -12,8 +12,10 @@ nav {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
 }
 
-a:hover, a:visited, a:link, a:active
-{
+a:hover,
+a:visited,
+a:link,
+a:active {
     text-decoration: none;
 }
 
@@ -178,6 +180,9 @@ footer {
 }
 
 .logoContainerHome:hover .logo-description {
+    -webkit-animation: moving 2s;
+    animation: moving 2s;
+    position: relative;
     padding: 3px;
     color: black;
     font-weight: bold;
@@ -217,4 +222,22 @@ footer {
 .info:hover {
     visibility: visible;
     text-decoration: none
+}
+
+@-webkit-keyframes moving {
+    from {
+        top: 55px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes moving {
+    from {
+        top: 55px;
+    }
+    to {
+        top: 0px;
+    }
 }

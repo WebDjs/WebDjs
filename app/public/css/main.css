@@ -180,8 +180,8 @@ footer {
 }
 
 .logoContainerHome:hover .logo-description {
-    -webkit-animation: moving 2s;
-    animation: moving 2s;
+    -webkit-animation: moving 1s;
+    animation: moving 1s;
     position: relative;
     padding: 3px;
     color: black;

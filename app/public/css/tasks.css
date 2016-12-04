@@ -9,7 +9,7 @@
     box-shadow: 5px 10px 10px 10px black;
 }
 
-.title {
+.taskTitle {
     font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
     font-size: 18px;
     font-style: normal;
@@ -20,7 +20,7 @@
     margin-top: 1ex;
 }
 
-.description {
+.taskDescription {
     font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
     font-size: 14px;
     border: 1px dashed black;
@@ -29,7 +29,7 @@
     margin-top: -10%;
 }
 
-.date {
+.taskDate {
     font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
     font-size: 14px;
     font-style: normal;
@@ -55,7 +55,7 @@
     box-shadow: 0px 5px 5px 5px black;
 }
 
-.creator {
+.taskCreator {
     font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
     font-size: 2em;
     font-style: normal;

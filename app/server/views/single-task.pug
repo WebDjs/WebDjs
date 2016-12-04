@@ -1,4 +1,16 @@
 extends shared/layout-logged
 
 block main-content
-    h1 Single task
+    img.singleTaskBack(src="images/back.png", alt='back',onclick="location.href = '/tasks';")
+    p.singleTaskTitle What's your Task
+    table.singleTaskContainer
+        tr
+            th Condition   
+            th Help
+            th Your answer 
+        tr
+            td this is first
+            td this is second 
+        tr
+            td this is second
+            td this is third

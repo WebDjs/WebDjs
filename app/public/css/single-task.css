@@ -1,0 +1,21 @@
+    .singleTaskBack {
+        width: 3em;
+        height: 3em;
+        margin-left: 1em;
+        border-radius: 25px
+    }
+    
+    .singleTaskBack:hover {
+        background: darkgray;
+    }
+    
+    .singleTaskTitle {
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }

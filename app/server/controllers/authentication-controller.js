@@ -36,7 +36,7 @@ module.exports = {
     logout: function (req, res, next) {
         fs.writeFile(pathToUsername, "");
         req.logout();
-        res.redirect("/");
+        res.redirect("/main");
     },
     isAuthenticated: function (req, res, next) {
         if (!req.isAuthenticated()) {

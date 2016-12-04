@@ -1,0 +1,27 @@
+extends shared/layout
+
+block main-content
+    style.
+        .warning-container {
+            margin-left: 20%; 
+            padding: 20px; 
+            border: 3px solid black; 
+            border-radius: 5px; 
+            max-width: 50%;
+        }
+        a.btn.btn-success.ok {
+            max-width: 30%;
+            display: block; 
+            margin: 0 auto; 
+            font-weight: bold; 
+            border: 3px solid black;
+            border-radius: 7px;
+            color: black;
+        }
+    div.warning-container 
+        img(src="images/warning.png", width="25%")
+        hr(style="color: black")
+        p 
+            h2 This application is still under development, so not the whole functionality works.
+        br
+        a.btn.btn-success.ok(href="/main") OK

@@ -9,5 +9,8 @@ module.exports = {
         fs.readFile("./server/common/username.txt", (err, data) => {
             res.render("home-logged", { name: data.toString(), logos: constantz.logos });
         });
-    }
+    },
+    warning: (req, res, next) => {
+        res.render("warning");
+    },
 }

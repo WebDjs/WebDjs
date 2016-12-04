@@ -2,8 +2,10 @@ var controllers = require("../controllers");
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
-        res.redirect("/main");
+        res.redirect("/warning");
     });
+
+    app.get("/warning", controllers.main.warning);
 
     app.get("/main", controllers.main.home);
 
@@ -34,6 +36,6 @@ module.exports = function (app) {
 
     // anyone else
     app.get("*", function (req, res) {
-        res.redirect("/main");
+        res.redirect("/warning");
     });
 };

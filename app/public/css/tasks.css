@@ -10,6 +10,12 @@
 }
 
 .title {
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
     text-align: center;
     margin-top: 1ex;
 }
@@ -20,6 +26,7 @@
     border: 1px dashed black;
     max-width: 50%;
     margin-left: 25%;
+    margin-top: -10%;
 }
 
 .date {
@@ -59,4 +66,10 @@
     margin-right: 1em;
     text-align: right;
     color: black;
+}
+
+.taskImgLogo {
+    width: 15%;
+    height: 15%;
+    margin-right: 55em;
 }

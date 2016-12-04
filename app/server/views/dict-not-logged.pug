@@ -22,19 +22,18 @@ block main-content
           li
             a.current-term-title= term.title
       hr
-    .col-sm-9
+    .col-sm-9.above
       .title
         .title-value
-          p.term-name= currentTerm.title
+          p.term-name(style="margin-right: 17em")= currentTerm.title
       .row
         .col-md-6
           textarea.term-definition.text= currentTerm.description
         .col-md-6
           img(src=currentTerm.image, alt="image info", style="width: 440px; height: 360px")
       .row
-        .col-md-6(style="margin-top: -15px;")
-          br
+        .col-md-6
           a.examples.links(href=currentTerm.examples, target="_blank") Examples
-        .col-md-6(style="margin-top: -15px;")
-          br
+        .col-md-6
           a.term-more.links(href=currentTerm.info, target="_blank") More information
+      br

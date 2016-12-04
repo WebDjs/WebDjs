@@ -21,7 +21,6 @@ block main-content
         each term in terms
           li
             a.current-term-title= term.title
-      hr
       .row
         .add-menu.dropup
           a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Add
@@ -46,38 +45,36 @@ block main-content
                   option nodejs
                   option express
                   option mongodb
-              label.add-label(for='tb-description', style='margin-left: 1%')
+              label.add-label(for="tb-description", style="margin-left: 1%")
                 h5 Description:
-              textarea#tb-description.form-control(name='description', type='text', placeholder='Description of the term...', style='min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%')
-              label.add-label(for='tb-example', style='margin-left: 1%')
+              textarea#tb-description.form-control(name="description", type="text", placeholder="Description of the term...", style="min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%")
+              label.add-label(for="tb-example", style="margin-left: 1%")
                 h5 Examples (set an url):
-              input#tb-example.form-control(name='examples', type='url', placeholder='http://www.github.com', style='min-width: 98%; max-width: 98%; margin: 1%')
-              label.add-label(for='tb-info', style='margin-left: 1%')
+              input#tb-example.form-control(name="examples", type="url", placeholder="http://www.github.com", style="min-width: 98%; max-width: 98%; margin: 1%")
+              label.add-label(for="tb-info", style="margin-left: 1%")
                 h5 More information link (set an url):
               
-              input#tb-info.form-control(name='info', type='url', placeholder='http://www.w3schools.com', style='min-width: 98%; max-width: 98%; margin: 1%')
-              label.add-label(for='tb-image-info', style='margin-left: 1%')
+              input#tb-info.form-control(name="info", type="url", placeholder="http://www.w3schools.com", style="min-width: 98%; max-width: 98%; margin: 1%")
+              label.add-label(for="tb-image-info", style="margin-left: 1%")
                 h5 Image info (set an url):
-              input#tb-image-info.form-control(name='image', type='url', placeholder='http://www.picture-organic-clothing.com/', style='min-width: 98%; max-width: 98%; margin: 1%')
+              input#tb-image-info.form-control(name="image", type="url", placeholder="http://www.picture-organic-clothing.com/", style="min-width: 98%; max-width: 98%; margin: 1%")
               
-              input#btn-add-item.btn.btn-default.btn-md(type='submit', value='Save', style='min-width: 93%')
-          a#dict-delete.btn.btn-danger.col-md-3(href='#') Delete
-          a#dict-edit.btn.btn-success.col-md-3(href='#') Edit
+              input#btn-add-item.btn.btn-default.btn-md(type="submit", value="Save", style="min-width: 93%")
+          a#dict-delete.btn.btn-danger.col-md-3(href="#") Delete
+          a#dict-edit.btn.btn-success.col-md-3(href="#") Edit
       hr
 
-    .col-sm-9
+    .col-sm-9.above
       .title
         .title-value
-          p.term-name= currentTerm.title
+          p.term-name(style="margin-right: 17em")= currentTerm.title
       .row
         .col-md-6
           textarea.term-definition.text= currentTerm.description
         .col-md-6
           img(src=currentTerm.image, alt="image info", style="width: 440px; height: 360px")
       .row
-        .col-md-6(style="margin-top: -15px;")
-          br
+        .col-md-6
           a.examples.links(href=currentTerm.examples, target="_blank") Examples
-        .col-md-6(style="margin-top: -15px;")
-          br
+        .col-md-6
           a.term-more.links(href=currentTerm.info, target="_blank") More information

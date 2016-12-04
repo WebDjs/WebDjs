@@ -1,0 +1,7 @@
+.buttons:hover {
+    background-color: lightgrey;
+}
+
+.visited-question {
+    background-color: grey;
+}

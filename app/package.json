@@ -1,34 +1,36 @@
 {
-  "name": "dictnode",
-  "version": "1.0.0",
-  "description": "",
+  "name": "webdjs",
+  "version": "0.0.1",
+  "description": "standard wep application",
   "main": "index.js",
   "scripts": {
-    "engines": {
-      "node": "6.9.1",
-      "npm": "3.10.8"
-    },
+    "dev": "./node_modules/.bin/nodemon .",
     "postinstall": "./node_modules/.bin/bower install",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "./node_modules/.bin/mocha tests tests/**/*.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
     "bower": "^1.8.0",
-    "chai": "^3.5.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-session": "^1.14.2",
-    "mocha": "^3.1.0",
     "mongodb": "^2.2.11",
     "mongoose": "^4.6.8",
     "node-notifier": "^4.6.1",
     "openurl": "^1.1.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "pug": "^2.0.0-beta6",
-    "pug-cli": "^1.0.0-alpha6",
-    "sinon": "^1.17.5"
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.10.2",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^1.17.6"
   }
 }

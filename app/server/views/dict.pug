@@ -13,11 +13,11 @@ block main-content
   .row.content(style="margin-left: 5px")
     .col-sm-3
       .input-group.search
-        input.form-control.search-space(type="text", placeholder="Search...")
+        input.form-control.search-space#search(type="text", placeholder="Search...")
         span.input-group-btn
           button.btn.btn-default(type="button")
             span.glyphicon.glyphicon-search
-      ul.nav.nav-pills.nav-stacked.items-list
+      ul.nav.nav-pills.nav-stacked.items-list#ulList
         each term in terms
           li
             a.current-term-title= term.title

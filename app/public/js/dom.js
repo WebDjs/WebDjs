@@ -14,7 +14,7 @@ let requester = {
 
 //===========================================
 
-$(".logoLink").on("click", function () {
+$(".logoLink").on("click", function() {
 
     let altValue = $(this).children("img").attr("alt");
 
@@ -25,7 +25,7 @@ $(".logoLink").on("click", function () {
 
 //===========================================
 
-$(".current-term-title").on("click", function () {
+$(".current-term-title").on("click", function() {
     let currentItem = $(this);
     let currentTitle = currentItem.text();
 
@@ -40,24 +40,27 @@ $("#add-form").on("click", (event) => {
 
 //===========================================
 
-$(".search-space").on("keyup", function () {
-    let $this = $(this);
-    let sample = $this.val();
-    let list = $("ul.nav.nav-pills.nav-stacked.items-list li a");
+$(".search-space").on("keyup", function() {
+    let input, filter, ul, li, a, i;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("ulList");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
 
-    for (let i = 0; i < list.length; i += 1) {
-        let currentListValue = $(list[i]).html();
-
-        if (sample !== "" && isMatching(sample, currentListValue)) {
-            $("body").removeClass("active");
-            $(list[i]).addClass("active");
-            //$(list[i]).attr("selected", "selected");
-            break;
         }
     }
+    let list = $("ul.nav.nav-pills.nav-stacked.items-list");
+
+
 });
 
-$(".search-space").on("change", function () {
+$(".search-space").on("change", function() {
     window.location.reload(true);
 });
 

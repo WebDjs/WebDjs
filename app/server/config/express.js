@@ -1,14 +1,15 @@
 "use strict";
 
-let express = require("express"),
+const express = require("express"),
     bodyParser = require("body-parser"),
     cookieParser = require("cookie-parser"),
     session = require("express-session"),
-    cors = require("cors"),
     passport = require("passport");
 
+const constantz = require("../common/constants");
+
 const sessionParams = {
-    secret: "magic unicorns",
+    secret: constantz.secret,
     resave: true,
     saveUninitialized: true,
     cookie: {
@@ -21,7 +22,7 @@ module.exports = function (app, config) {
     // View Engine
     app.set("view engine", "pug");
     app.set("views", config.rootPath + "/server/views");
-    
+
     // BodyParser Middleware
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));

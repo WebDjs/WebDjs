@@ -1,4 +1,7 @@
+const secretKey = "secret unicorns";
+
 module.exports = {
+    secret: secretKey,
     defaultImageUrl: "https://gitlab.com/uploads/project/avatar/1345047/leaflet-here.png",
     questions: [{
         question: "1. What does HTML stand for?",

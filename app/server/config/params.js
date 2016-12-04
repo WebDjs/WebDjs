@@ -1,10 +1,10 @@
-var path = require("path");
-var rootPath = path.normalize(__dirname + "/../../");
+let path = require("path");
+let rootPath = path.normalize(__dirname + "/../../");
 
 module.exports = {
     development: {
         rootPath: rootPath,
-        db: "mongodb://localhost:27017/webdjsdb",
+        db: "mongodb://localhost:27017/appdb",
         port: process.env.PORT || 3333
     },
     production: {

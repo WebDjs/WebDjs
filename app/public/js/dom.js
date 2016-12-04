@@ -41,8 +41,6 @@ $("#add-form").on("click", (event) => {
 //===========================================
 
 $(".search-space").on("keyup", function () {
-    $("body").removeClass("active");
-
     let $this = $(this);
     let sample = $this.val();
     let list = $("ul.nav.nav-pills.nav-stacked.items-list li a");
@@ -51,8 +49,9 @@ $(".search-space").on("keyup", function () {
         let currentListValue = $(list[i]).html();
 
         if (sample !== "" && isMatching(sample, currentListValue)) {
+            $("body").removeClass("active");
             $(list[i]).addClass("active");
-            $(list[i]).attr('selected','selected');
+            //$(list[i]).attr("selected", "selected");
             break;
         }
     }

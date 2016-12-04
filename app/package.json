@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "engines": {
+      "node": "6.9.1",
+      "npm": "3.10.8"
+    },
     "postinstall": "./node_modules/.bin/bower install",
     "start": "node app.js"
   },

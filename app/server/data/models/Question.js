@@ -4,6 +4,7 @@ let requiredMessage = "{PATH} is required";
 
 module.exports.init = function() {
     let questionSchema = mongoose.Schema({
+        tag: { type: String },
         question: { type: String },
         answerA: { type: String },
         answerB: { type: String },

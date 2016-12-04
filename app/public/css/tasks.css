@@ -1,0 +1,62 @@
+.jumbotron.text-center {
+    border-style: inset;
+    border: 3px;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 6ex;
+    width: 80%;
+    padding: 10px;
+    box-shadow: 5px 10px 10px 10px black;
+}
+
+.title {
+    text-align: center;
+    margin-top: 1ex;
+}
+
+.description {
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-size: 14px;
+    border: 1px dashed black;
+    max-width: 50%;
+    margin-left: 25%;
+}
+
+.date {
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: -0.5em;
+    margin-left: 1em;
+    text-align: left;
+    color: black;
+}
+
+.taskButton {
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-size: 19px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    border-radius: 25px;
+    margin-top: 5.2em;
+    width: 25%;
+    box-shadow: 0px 5px 5px 5px black;
+}
+
+.creator {
+    font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+    font-size: 2em;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: -1.8em;
+    margin-right: 1em;
+    text-align: right;
+    color: black;
+}

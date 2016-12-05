@@ -37,7 +37,7 @@ module.exports = {
     errorAdd: (req, res, next) => {
         let data = {
             message: constantz.messages.errorAdd,
-            route: "/dict"
+            route: "/dictionary"
         }
 
         res.render("notifications/error-logged", data);

@@ -108,5 +108,24 @@ module.exports = {
         description: "Free and open-source cross-platform document-oriented database program. Classified as a NoSQL database program.",
         num: "13"
     }
+    ],
+    questions: [
+        {
+            question: "Question?",
+            answers: [
+                {
+                    answer: "Answer 1"
+                },
+                {
+                    answer: "Answer 2"
+                },
+                {
+                    answer: "Answer 3"
+                },
+                {
+                    answer: "Answer 4"
+                }
+            ]
+        }
     ]
 };

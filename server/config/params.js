@@ -9,7 +9,7 @@ module.exports = {
     },
     production: {
         rootPath: rootPath,
-        db: "",
+        db: "mongodb://Admin:secretpassword@ds113958.mlab.com:13958/webdjs",
         port: process.env.PORT || 3333
     }
 };

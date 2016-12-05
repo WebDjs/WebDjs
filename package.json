@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "description": "standard wep application",
   "main": "index.js",
+  "engines": {
+    "node": "6.9.x",
+    "npm": "3.10.x"
+  },
   "scripts": {
     "dev": "./node_modules/.bin/nodemon .",
     "postinstall": "./node_modules/.bin/bower install",
     "start": "node app.js",
     "test": "./node_modules/.bin/mocha tests tests/**/*.js"
   },
-  "author": "",
+  "author": "WebDjs",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",

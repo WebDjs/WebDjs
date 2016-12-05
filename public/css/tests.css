@@ -5,3 +5,7 @@
 .visited-question {
     background-color: grey;
 }
+
+.start-btn {
+    max-width: 120px
+}

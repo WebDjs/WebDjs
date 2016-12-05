@@ -25,8 +25,8 @@ block main-content
         .add-menu.dropup
           a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Add
           .dropdown-menu(style="min-width: 100%; max-width: 100%; min-height: 400px; max-height: 495px; font-size: 28px;")
-            form#add-form(method='post', action='/add')
-              label.add-label(for='tb-title', style='margin-left: 1%')
+            form#add-form(method="post", action="/add")
+              label.add-label(for="tb-title", style="margin-left: 1%")
                 h5 Title:
               .row(style="margin-left: 3px")
                 input#tb-title.form-control.col-md-8(name='title', type='text', placeholder='Title of the term...', style='min-width: 60%; max-width: 60%; margin: 1%')
@@ -37,9 +37,9 @@ block main-content
                   option less
                   option sass
                   option stylus
-                  option js
+                  option javascript
                   option jquery
-                  option ts
+                  option typescript
                   option angular
                   option react
                   option nodejs

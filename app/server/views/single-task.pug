@@ -2,15 +2,21 @@ extends shared/layout-logged
 
 block main-content
     img.singleTaskBack(src="images/back.png", alt='back',onclick="location.href = '/tasks';")
-    p.singleTaskTitle What's your Task
-    table.singleTaskContainer
-        tr
-            th Condition   
-            th Help
-            th Your answer 
-        tr
-            td this is first
-            td this is second 
-        tr
-            td this is second
-            td this is third
+    p.singleTaskTitle Let see what's your task
+    div.primaryContainer 
+        div.singleTaskContainer
+            p.titleP Task
+            p.textP  
+               | Write an HTML page like in the Expectation!
+        div.singleExpectationContainer
+            p.titleP Expectation
+            img.singleTaskExam(src="images/singleTaskExpectations/html1.png", alt='html')
+        div.singleAnswerContainer
+            p.titleP Your answer
+            p.textP  
+               | Write your answer here :
+            input.inputField(type="text")
+            button.answerButton Submit 
+    br
+    br   
+        

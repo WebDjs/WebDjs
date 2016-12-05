@@ -2,7 +2,7 @@
         width: 3em;
         height: 3em;
         margin-left: 1em;
-        border-radius: 25px
+        border-radius: 25px;
     }
     
     .singleTaskBack:hover {
@@ -10,12 +10,81 @@
     }
     
     .singleTaskTitle {
+        font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
     }
     
-    table,
-    th,
-    td {
-        border: 1px solid black;
+    .primaryContainer {
+        height: 30em;
+        width: 100%;
+    }
+    
+    .singleTaskContainer {
+        background: #eeeeee;
+        border: 2px solid black;
+        width: 30%;
+        height: 100%;
+        margin-left: 2%;
+        border-radius: 20px;
+        box-shadow: 0px 2px 2px 2px grey;
+    }
+    
+    .singleExpectationContainer {
+        background: #eeeeee;
+        border: 2px solid black;
+        width: 30%;
+        height: 100%;
+        margin-left: 2em;
+        border-radius: 20px;
+        margin-left: 34%;
+        margin-top: -30em;
+        box-shadow: 0px 2px 2px 2px grey;
+    }
+    
+    .singleAnswerContainer {
+        background: #eeeeee;
+        border: 2px solid black;
+        width: 30%;
+        height: 100%;
+        margin-left: 66%;
+        margin-top: -30em;
+        border-radius: 20px;
+        box-shadow: 0px 2px 2px 2px grey;
+    }
+    
+    .titleP {
+        font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+        border-bottom: 1px solid black;
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .textP {
+        font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    .singleTaskExam {
+        width: 100%;
+    }
+    
+    .inputField {
+        width: 100%;
+        height: 60%;
+    }
+    
+    .answerButton {
+        font-family: Goudy Old Style, Garamond, Big Caslon, Times New Roman, serif;
+        font-size: 22px;
+        border-radius: 25px;
+        width: 30%;
+        height: 12%;
+        background: black;
+        color: white;
+        margin-top: 10px;
+        margin-left: 35%;
+        box-shadow: 0px 2px 2px 2px grey;
     }

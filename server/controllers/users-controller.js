@@ -1,7 +1,6 @@
 const constantz = require("../common/constants");
 const fs = require("fs");
 let encryption = require("../utilities/encryption");
-let notifier = require("../utilities/notifier");
 let data = require("../data");
 const pathToUsername = "./server/common/username.txt";
 
@@ -17,14 +16,18 @@ module.exports = {
         if (newUserData.password != newUserData.confirmPassword) {
             req.session.error = "Passwords do not match!";
             res.redirect("/register");
-            notifier.error("Passwords do not match!");
+            res.status(401);
+            res.redirect("/error-register");
         }
         else {
             newUserData.salt = encryption.generateSalt();
             newUserData.hashPass = encryption.generateHashedPassword(newUserData.salt, newUserData.password);
+
             data.users.create(newUserData, function (err, user) {
                 if (err) {
                     console.log("Failed to register new user: " + err);
+                    res.status(400);
+                    res.redirect("/error-register");
                     return;
                 }
 
@@ -33,13 +36,12 @@ module.exports = {
                 req.logIn(user, function (err) {
                     if (err) {
                         res.status(400);
-                        notifier.error(err.toString());
+                        res.redirect("/error-register");
                     }
                     else {
                         fs.readFile("./server/common/username.txt", (err, data) => {
-
+                            res.status(200);
                             res.render("home-logged", { name: data.toString(), logos: constantz.logos });
-                            notifier.success("User registered!");
                         });
                     }
                 })

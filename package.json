@@ -23,8 +23,6 @@
     "express-session": "^1.14.2",
     "mongodb": "^2.2.12",
     "mongoose": "^4.6.8",
-    "node-notifier": "^4.6.1",
-    "openurl": "^1.1.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta6"
@@ -35,6 +33,7 @@
     "eslint": "^3.10.2",
     "mocha": "^3.2.0",
     "nodemon": "^1.11.0",
+    "openurl": "^1.1.1",
     "sinon": "^1.17.6"
   }
 }

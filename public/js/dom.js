@@ -84,6 +84,24 @@ function isMatching(sample, listWord) {
 
 //===========================================
 
+$("#dict-delete.btn.btn-danger").on("click", function ()  {
+    let currentItem = $("#obj-title").html();
+
+    requester.post("/delete", currentItem );
+    //window.location.reload(true);
+});
+    
+//===========================================
+
+$(".#dict-edit.btn.btn-success").on("click", function ()  {
+    let currentItem = $("#obj-title").html();
+
+    requester.post("/delete", currentItem );
+    //window.location.reload(true);
+});
+    
+//===========================================
+
 $(".buttons").on("click", function ()  {
     $(this).addClass("visited-question");
 });

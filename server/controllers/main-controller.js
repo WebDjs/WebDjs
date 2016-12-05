@@ -11,6 +11,43 @@ module.exports = {
         });
     },
     warning: (req, res, next) => {
-        res.render("warning");
+        let data = {
+            message: constantz.messages.warning,
+            route: "/main"
+        }
+
+        res.render("notifications/warning", data);
     },
+    errorRegister: (req, res, next) => {
+        let data = {
+            message: constantz.messages.errorRegister,
+            route: "/register"
+        }
+
+        res.render("notifications/error", data);
+    },
+    errorLogin: (req, res, next) => {
+        let data = {
+            message: constantz.messages.errorLogin,
+            route: "/login"
+        }
+
+        res.render("notifications/error", data);
+    },
+    errorAdd: (req, res, next) => {
+        let data = {
+            message: constantz.messages.errorAdd,
+            route: "/dict"
+        }
+
+        res.render("notifications/error-logged", data);
+    },
+    successAdd: (req, res, next) => {
+        let data = {
+            message: constantz.messages.successAdd,
+            route: "/dict"
+        }
+
+        res.render("notifications/error-logged", data);
+    }
 }

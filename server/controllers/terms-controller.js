@@ -1,7 +1,6 @@
 const fs = require("fs");
 let data = require("../data"),
     constantz = require("../common/constants"),
-    notifier = require("../utilities/notifier"),
     termsTag = "",
     terms = [],
     currentTerm = {},
@@ -82,17 +81,37 @@ module.exports = {
             data.terms.createTerm(newTerm, (err, term) => {
                 if (err) {
                     console.log("Failed to add new term: " + err);
-                    notifier.error("Failed to add new term: " + err);
                     res.status(400);
+                    res.redirect("/error-add");
                 }
-                notifier.success("Term added!");
+
                 res.status(200);
-                res.redirect("/dict");
+                res.redirect("/success-add");
             });
         }
         else {
-            notifier.error("Title and description must not be empty!");
             res.status(400);
+            res.redirect("/error-add");
         }
+    },
+    postTermToDelete: (req, res) => {
+        let titleValue = req.body.data;
+
+        data.terms.getTermsByTitle(titleValue)
+            .then((result) => {
+                currentTerm = result[0];
+            });
+
+        res.redirect("/dict");
+    },
+    postTermToEdit: (req, res) => {
+        let titleValue = req.body.data;
+
+        data.terms.getTermsByTitle(titleValue)
+            .then((result) => {
+                currentTerm = result[0];
+            });
+
+        res.redirect("/dict");
     }
 };

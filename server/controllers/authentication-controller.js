@@ -1,6 +1,5 @@
 const fs = require("fs");
 const passport = require("passport");
-const notifier = require("../utilities/notifier");
 const pathToUsername = "./server/common/username.txt";
 const constantz = require("../common/constants");
 
@@ -8,24 +7,26 @@ module.exports = {
     login: function (req, res, next) {
         let auth = passport.authenticate("local", function (err, user) {
             if (err) {
-                //res.redirect("/error");
-                notifier.error(err.toString());
+                res.status(400);
+                res.redirect("/error-login");
             }
 
             if (!user) {
-                notifier.error("Wrong username or password!");
+                res.status(401);
+                res.redirect("/error-login");
                 return;
             }
             fs.writeFile(pathToUsername, req.body.username);
 
             req.logIn(user, function (err) {
                 if (err) {
-                    //res.redirect("/error");
-                    notifier.error(err.toString());
+                    res.status(400);
+                    res.redirect("/error-login");
                 }
                 fs.readFile("./server/common/username.txt", (err, data) => {
                     let dataUsername = data.toString();
 
+                    res.status(200);
                     res.render("home-logged", { name: dataUsername, logos: constantz.logos });
                 });
             })

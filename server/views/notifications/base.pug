@@ -1,4 +1,4 @@
-extends shared/layout
+extends ../shared/layout
 
 block main-content
     style.
@@ -7,7 +7,7 @@ block main-content
             padding: 20px; 
             border: 3px solid black; 
             border-radius: 5px; 
-            max-width: 50%;
+            max-width: 60%;
         }
         a.btn.btn-success.ok {
             max-width: 30%;
@@ -19,9 +19,9 @@ block main-content
             color: black;
         }
     div.warning-container 
-        img(src="images/warning.png", width="25%")
+        block img-content
         hr(style="color: black")
         p 
-            h2 This application is still under development, so not the whole functionality works.
+            h2= message
         br
-        a.btn.btn-success.ok(href="/main") OK
+        a.btn.btn-success.ok(href= route) OK

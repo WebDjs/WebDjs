@@ -1,15 +1,14 @@
 {
   "name": "web-djs",
-  "description": "SPA app for JS development",
+  "description": "standard web app",
   "main": "app.js",
   "authors": [
-    "Absend"
+    "Absend", 
+    "gecapo",
+    "mapo094"
   ],
-  "license": "MIT",
-  "keywords": [
-    "spa"
-  ],
-  "homepage": "https://github.com/Absend/WebMeJS",
+  "license": "ISC",
+  "homepage": "https://github.com/WebDjs/WebDjs",
   "ignore": [
     "**/.*",
     "node_modules",

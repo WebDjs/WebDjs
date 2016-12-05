@@ -5,9 +5,14 @@ module.exports = function (app) {
         res.redirect("/warning");
     });
 
-    app.get("/warning", controllers.main.warning);
-
     app.get("/main", controllers.main.home);
+
+    // notifications
+    app.get("/warning", controllers.main.warning);
+    app.get("/error-register", controllers.main.errorRegister);
+    app.get("/error-login", controllers.main.errorLogin);
+    app.get("/error-add", controllers.main.errorAdd);
+    app.get("/success-add", controllers.main.successAdd);
 
     // user registration and login routes
     app.get("/register", controllers.users.getRegister);
@@ -19,7 +24,6 @@ module.exports = function (app) {
 
     // logged user routes
     app.get("/logged", controllers.main.homeLogged);
-
     app.get("/profile", controllers.users.getProfile);
 
     app.get("/test", controllers.questions.getTest);
@@ -29,10 +33,12 @@ module.exports = function (app) {
 
     // dictionary routes
     app.get("/dict-not-logged", controllers.terms.getDictNotLogged);
+    app.get("/dict", controllers.terms.getDict);
     app.post("/dict-tag", controllers.terms.postTagNotLogged);
     app.post("/dict-current-title", controllers.terms.postTitleNotLogged);
-    app.get("/dict", controllers.terms.getDict);
     app.post("/add", controllers.terms.postTerm);
+    app.post("/delete", controllers.terms.postTermToDelete);
+    app.post("/edit", controllers.terms.postTermToEdit);
 
     // anyone else
     app.get("*", function (req, res) {

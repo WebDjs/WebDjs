@@ -3,80 +3,13 @@ const secretKey = "secret unicorns";
 module.exports = {
     secret: secretKey,
     defaultImageUrl: "https://gitlab.com/uploads/project/avatar/1345047/leaflet-here.png",
-    questions: [{
-        question: "1. What does HTML stand for?",
-        answers: [
-            {
-                answer: "Hyperlinks and Text Markup Language",
-                value: false
-            }, {
-                answer: "Home Tool Markup Language",
-                value: false
-            }, {
-                answer: "Hyperlinks Tool Markup Language",
-                value: false
-            }, {
-                answer: "Hyper Text Markup Language",
-                value: true
-            }
-        ]
-    }],
-    types: [{
-        test: "test"
+    messages: {
+        warning: "This application is still under development, so not the whole functionality works!",
+        errorRegister: "Registration failed! Please, enter username and password!",
+        errorAdd: "Adding failed! Please, enter title and description!",
+        successAdd: "Term is added!",
+        errorLogin: "Wrong username or password!"
     },
-    {
-        problem: "problem"
-    },
-    {
-        dict: "dict"
-    }
-    ],
-    categories: [{
-        html: "html"
-    },
-    {
-        css: "css"
-    },
-    {
-        bootstarp: "bootstarp"
-    },
-    {
-        less: "less"
-    },
-    {
-        sass: "sass"
-    },
-    {
-        stylus: "stylus"
-    },
-    {
-        javascript: "javascript"
-    },
-    {
-        jquery: "jquery"
-    },
-    {
-        typeScript: "typeScript"
-    },
-    {
-        angular: "angular"
-    },
-    {
-        react: "react"
-    },
-    {
-        nodejs: "nodejs"
-    },
-    {
-        express: "express"
-    },
-    {
-        mongodb: "mongodb"
-    },
-    {
-        mongoose: "mongoose"
-    }
-    ],
     logos: [{
         title: "HTML",
         name: "html loading...",

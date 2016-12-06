@@ -78,16 +78,25 @@ module.exports = {
         let newTerm = req.body;
 
         if (newTerm.title !== "" && newTerm.description !== "") {
-            data.terms.createTerm(newTerm, (err, term) => {
-                if (err) {
-                    console.log("Failed to add new term: " + err);
-                    res.status(400);
-                    res.redirect("/error-add");
-                }
+            data.terms.getTermsByTitle(newTerm.title)
+                .then((result) => {
+                    if (result.length < 1){
+                        data.terms.createTerm(newTerm, (err, term) => {
+                            if (err) {
+                                console.log("Failed to add new term: " + err);
+                                res.status(400);
+                                res.redirect("/error-add");
+                            }
 
-                res.status(200);
-                res.redirect("/success-add");
-            });
+                            res.status(200);
+                            res.redirect("/success-add");
+                        });
+                    }
+                    else {
+                        res.status(400);
+                        res.redirect("/error-same-add");
+                    }
+                });
         }
         else {
             res.status(400);

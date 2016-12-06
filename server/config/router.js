@@ -12,6 +12,7 @@ module.exports = function (app) {
     app.get("/error-register", controllers.main.errorRegister);
     app.get("/error-login", controllers.main.errorLogin);
     app.get("/error-add", controllers.main.errorAdd);
+    app.get("/error-same-add", controllers.main.errorSameAdd);
     app.get("/success-add", controllers.main.successAdd);
 
     // user registration and login routes

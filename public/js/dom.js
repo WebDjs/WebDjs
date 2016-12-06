@@ -102,6 +102,6 @@ $(".#dict-edit.btn.btn-success").on("click", function ()  {
     
 //===========================================
 
-$(".buttons").on("click", function ()  {
+$("button.buttons").on("click", function ()  {
     $(this).addClass("visited-question");
 });

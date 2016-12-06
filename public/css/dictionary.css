@@ -123,3 +123,49 @@ ul {
 .current-term-title:hover {
     font-size: 24px;
 }
+
+/*========================================*/
+
+.dropdown-menu {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 400px;
+    max-height: 495px;
+    font-size: 28px;
+}
+
+.tb-title {
+    min-width: 60%;
+    max-width: 60%;
+    margin: 1%;
+}
+
+.add-label {
+    margin-left: 1%
+}
+
+select.col-md-4 {
+    margin-top: 5px;
+    min-height: 30px;
+    max-width: 32%;
+    font-size: 18px
+}
+
+label.add-label {
+    margin-left: 1%
+}
+
+.text-field {
+    min-width: 98%;
+    max-width: 98%;
+    margin: 1%
+}
+
+.text-area {
+    min-height: 120px;
+    max-height: 120px;
+}
+
+.btn-save {
+    min-width: 93%;
+}

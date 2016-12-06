@@ -37,7 +37,15 @@ module.exports = {
     errorAdd: (req, res, next) => {
         let data = {
             message: constantz.messages.errorAdd,
-            route: "/dictionary"
+            route: "/dict"
+        }
+
+        res.render("notifications/error-logged", data);
+    },
+    errorSameAdd: (req, res, next) => {
+        let data = {
+            message: constantz.messages.errorSameAdd,
+            route: "/dict"
         }
 
         res.render("notifications/error-logged", data);
@@ -48,6 +56,6 @@ module.exports = {
             route: "/dict"
         }
 
-        res.render("notifications/error-logged", data);
+        res.render("notifications/success-logged", data);
     }
 }

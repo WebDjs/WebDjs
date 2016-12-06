@@ -24,13 +24,13 @@ block main-content
       .row
         .add-menu.dropup
           a#dict-add.btn.btn-primary.col-md-3.btn.dropdown-toggle(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Add
-          .dropdown-menu(style="min-width: 100%; max-width: 100%; min-height: 400px; max-height: 495px; font-size: 28px;")
+          .dropdown-menu
             form#add-form(method="post", action="/add")
-              label.add-label(for="tb-title", style="margin-left: 1%")
+              label.add-label
                 h5 Title:
               .row(style="margin-left: 3px")
-                input#tb-title.form-control.col-md-8(name='title', type='text', placeholder='Title of the term...', style='min-width: 60%; max-width: 60%; margin: 1%')
-                select.col-md-4(name="tag", style="margin-top: 5px; min-height: 30px; max-width: 32%; font-size: 18px")
+                input#tb-title.tb-title.form-control.col-md-8(name="title", placeholder="Title of the term...")
+                select.col-md-4(name="tag")
                   option html
                   option css
                   option bootstrap
@@ -45,23 +45,23 @@ block main-content
                   option nodejs
                   option express
                   option mongodb
-              label.add-label(for="tb-description", style="margin-left: 1%")
+              label.add-label
                 h5 Description:
-              textarea#tb-description.form-control(name="description", type="text", placeholder="Description of the term...", style="min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%")
-              label.add-label(for="tb-example", style="margin-left: 1%")
+              textarea#tb-description.text-field.text-area.form-control(name="description", type="text", placeholder="Description of the term...")
+              label.add-label
                 h5 Examples (set an url):
-              input#tb-example.form-control(name="examples", type="url", placeholder="http://www.github.com", style="min-width: 98%; max-width: 98%; margin: 1%")
-              label.add-label(for="tb-info", style="margin-left: 1%")
+              input#tb-example.text-field.form-control(name="examples", type="url", placeholder="http://www.github.com")
+              label.add-label
                 h5 More information link (set an url):
               
-              input#tb-info.form-control(name="info", type="url", placeholder="http://www.w3schools.com", style="min-width: 98%; max-width: 98%; margin: 1%")
-              label.add-label(for="tb-image-info", style="margin-left: 1%")
+              input#tb-info.text-field.form-control(name="info", type="url", placeholder="http://www.w3schools.com")
+              label.add-label
                 h5 Image info (set an url):
-              input#tb-image-info.form-control(name="image", type="url", placeholder="http://www.picture-organic-clothing.com/", style="min-width: 98%; max-width: 98%; margin: 1%")
+              input#tb-image-info.text-field.form-control(name="image", type="url", placeholder="http://www.picture-organic-clothing.com/")
               
-              input#btn-add-item.btn.btn-default.btn-md(type="submit", value="Save", style="min-width: 93%")
-          a#dict-delete.btn.btn-danger.col-md-3(href="#") Delete
-          a#dict-edit.btn.btn-success.col-md-3(href="#") Edit
+              input#btn-add-item.btn-save.btn.btn-default.btn-md(type="submit", value="Save")
+          a#dict-delete.btn.btn-danger.col-md-3(href="/delete") Delete
+          a#dict-edit.btn.btn-success.col-md-3(href="/edit") Edit
       hr
 
     .col-sm-9

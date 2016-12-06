@@ -7,6 +7,7 @@ module.exports = {
         warning: "This application is still under development, so not the whole functionality works!",
         errorRegister: "Registration failed! Please, enter username and password!",
         errorAdd: "Adding failed! Please, enter title and description!",
+        errorSameAdd: "Adding failed! Title already exists!",
         successAdd: "Term is added!",
         errorLogin: "Wrong username or password!"
     },

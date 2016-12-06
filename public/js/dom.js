@@ -1,12 +1,12 @@
 "use strict";
 
 let requester = {
-    post: (url, data) => {
+    post: (url, data, func) => {
         return $.ajax({
             type: "POST",
             url: url,
             data: { data: data },
-            success: window.location.reload(),
+            success: func || window.location.reload(),
             dataType: "json"
         });
     }
@@ -16,7 +16,7 @@ let requester = {
 
 $(".logoLink").on("click", function () {
 
-    let altValue = $(this).children("img").attr("alt");
+    let altValue = $(this).children("img").attr("alt") || $(".logoImgHome").attr("alt");
 
     $("#obj-title").html(altValue.toUpperCase());
 
@@ -84,24 +84,25 @@ function isMatching(sample, listWord) {
 
 //===========================================
 
-$("#dict-delete.btn.btn-danger").on("click", function ()  {
-    let currentItem = $("#obj-title").html();
+$("#dict-delete.btn.btn-danger").on("click", function () {
+    let currentItem = $("p.term-name").html();
 
-    requester.post("/delete", currentItem );
-    //window.location.reload(true);
+    requester.post("/delete");
 });
-    
+
 //===========================================
 
-$(".#dict-edit.btn.btn-success").on("click", function ()  {
-    let currentItem = $("#obj-title").html();
+$("#dict-edit.btn.btn-success").on("click", function () {
+    let currentItem = $("p.term-name").html();
 
-    requester.post("/delete", currentItem );
-    //window.location.reload(true);
+    console.log(currentItem);
+
+
+    //requester.post("/edit", currentItem );
 });
-    
+
 //===========================================
 
-$("button.buttons").on("click", function ()  {
+$("button.buttons").on("click", function () {
     $(this).addClass("visited-question");
 });

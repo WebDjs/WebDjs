@@ -1,3 +1,5 @@
+const async = require("async");
+
 let Term = require("mongoose").model("Term");
 
 module.exports = {
@@ -31,6 +33,13 @@ module.exports = {
                 }
 
                 return resolve(terms);
+            });
+        });
+    },
+    deleteTermsByTitle(titleValue, cb) {
+        Term.find({ title: titleValue }, (err, terms) => {
+            async.each(terms, function (dataItem, callback) {
+                dataItem.remove(cb);
             });
         });
     },

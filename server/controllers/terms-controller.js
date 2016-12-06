@@ -34,7 +34,7 @@ module.exports = {
         // " loading...".length = 11
         let len = tag.length - 11;
         termsTag = tag.substr(0, len);
-        
+
         dataObj = {
             name: dataUser,
             logoes: constantz.logos,
@@ -80,7 +80,7 @@ module.exports = {
         if (newTerm.title !== "" && newTerm.description !== "") {
             data.terms.getTermsByTitle(newTerm.title)
                 .then((result) => {
-                    if (result.length < 1){
+                    if (result.length < 1) {
                         data.terms.createTerm(newTerm, (err, term) => {
                             if (err) {
                                 console.log("Failed to add new term: " + err);
@@ -106,12 +106,18 @@ module.exports = {
     postTermToDelete: (req, res) => {
         let titleValue = req.body.data;
 
-        data.terms.getTermsByTitle(titleValue)
-            .then((result) => {
-                currentTerm = result[0];
-            });
-
-        res.redirect("/dict");
+        data.terms.deleteTermsByTitle(titleValue, (err, back) => {
+            if (err) {
+                console.log("Failed to delete new term: " + err);
+                res.status(400);
+            }
+            else {
+                res.status(200);
+                console.log('blabla');
+                
+                res.redirect("/dict");
+            }
+        });
     },
     postTermToEdit: (req, res) => {
         let titleValue = req.body.data;
@@ -120,7 +126,5 @@ module.exports = {
             .then((result) => {
                 currentTerm = result[0];
             });
-
-        res.redirect("/dict");
     }
 };

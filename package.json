@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "description": "standard wep application",
   "main": "index.js",
+  "author": "WebDjs",
+  "license": "ISC",
   "engines": {
     "node": "6.9.x",
     "npm": "3.10.x"
@@ -13,9 +15,8 @@
     "start": "node app.js",
     "test": "./node_modules/.bin/mocha tests tests/**/*.js"
   },
-  "author": "WebDjs",
-  "license": "ISC",
   "dependencies": {
+    "async": "^2.1.4",
     "body-parser": "^1.15.2",
     "bower": "^1.8.0",
     "cookie-parser": "^1.4.3",

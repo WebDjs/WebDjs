@@ -1,14 +1,12 @@
 let mongoose = require("mongoose");
 
-let requiredMessage = "{PATH} is required";
-
-module.exports.init = function() {
+module.exports.init = function () {
     let taskSchema = mongoose.Schema({
-        title: { type: String, required: requiredMessage },
-        description: { type: String, required: requiredMessage },
-        category: { type: String, required: requiredMessage },
-        date: { type: Date, required: requiredMessage },
-        creator: { type: String, required: requiredMessage }
+        title: { type: String },
+        description: { type: String },
+        category: { type: String },
+        date: { type: Date, default: Date.now() },
+        creator: { type: String }
     });
 
     let Task = mongoose.model("Task", taskSchema);

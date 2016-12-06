@@ -3,8 +3,8 @@ const mongoose = require("mongoose"),
 
 module.exports.init = function () {
     let termSchema = mongoose.Schema({
-        title: { type: String },
-        description: { type: String },
+        title: { type: String, required: true },
+        description: { type: String, required: true  },
         info: { type: String },
         examples: { type: String },
         tag: { type: String },

@@ -34,12 +34,12 @@ module.exports = {
         // " loading...".length = 11
         let len = tag.length - 11;
         termsTag = tag.substr(0, len);
-        currentTerm = {};
+        
         dataObj = {
             name: dataUser,
             logoes: constantz.logos,
             terms: terms,
-            currentTerm: currentTerm
+            currentTerm: {}
         };
 
         res.render("dict-not-logged", dataObj);
@@ -50,8 +50,8 @@ module.exports = {
                 terms = result;
                 dataObj = {
                     logoes: constantz.logos,
-                    terms: terms,
-                    currentTerm: currentTerm
+                    terms: terms || [],
+                    currentTerm: currentTerm || {}
                 }
 
                 res.render("dict-not-logged", dataObj);
@@ -66,8 +66,8 @@ module.exports = {
                         dataObj = {
                             name: data,
                             logoes: constantz.logos,
-                            terms: terms,
-                            currentTerm: currentTerm
+                            terms: terms || [],
+                            currentTerm: currentTerm || {}
                         }
 
                         res.render("dict", dataObj);

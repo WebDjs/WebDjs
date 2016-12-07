@@ -1,6 +1,6 @@
 "use strict";
 
-let express = require("express");
+const express = require("express");
 
 let env = process.env.NODE_ENV || "development";
 

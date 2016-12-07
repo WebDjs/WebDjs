@@ -1,3 +1,6 @@
+/* globals require module Promise */
+"use strict";
+
 const async = require("async");
 
 let Term = require("mongoose").model("Term");

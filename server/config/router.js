@@ -1,4 +1,5 @@
-var controllers = require("../controllers");
+"use strict";
+let controllers = require("../controllers");
 
 module.exports = function (app) {
     app.get("/", function (req, res) {

@@ -41,17 +41,17 @@ $("#add-form").on("click", (event) => {
 //===========================================
 
 $(".search-space").on("keyup", function () {
-    let input, filter, ul, li, a, i;
+    let input, sample, ul, li, a, i;
 
     input = document.getElementById("search");
-    filter = input.value.toUpperCase();
+    sample = input.value.toUpperCase();
     ul = document.getElementById("ulList");
     li = ul.getElementsByTagName("li");
 
     for (i = 0; i < li.length; i++) {
         a = li[i].getElementsByTagName("a")[0];
 
-        if (isMatching(filter, a.innerHTML)) {
+        if (isMatching(sample, a.innerHTML)) {
             li[i].style.display = "";
         } else {
             li[i].style.display = "none";
@@ -73,7 +73,8 @@ function isMatching(sample, listWord) {
         return false;
     }
 
-    for (let j = 0; j < sample.length; j += 1) {
+    let j;
+    for ( j = 0; j < sample.length; j += 1) {
         if (listWord[j] !== sample[j]) {
             return false;
         }
@@ -94,11 +95,7 @@ $("#dict-delete.btn.btn-danger").on("click", function () {
 
 $("#dict-edit.btn.btn-success").on("click", function () {
     let currentItem = $("p.term-name").html();
-
-    console.log(currentItem);
-
-
-    //requester.post("/edit", currentItem );
+    requester.post("/edit", currentItem );
 });
 
 //===========================================

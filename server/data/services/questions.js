@@ -1,3 +1,6 @@
+/* globals require module Promise */
+"use strict";
+
 let Question = require("mongoose").model("Question");
 
 function* idGenerator() {

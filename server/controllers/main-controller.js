@@ -57,5 +57,29 @@ module.exports = {
         }
 
         res.render("notifications/success-logged", data);
+    },
+    errorDelEdit: (req, res, next) => {
+        let data = {
+            message: constantz.messages.errorNotPro,
+            route: "/dict"
+        }
+
+        res.render("notifications/error-logged", data);
+    },
+    errordelete: (req, res, next) => {
+        let data = {
+            message: constantz.messages.errorDelete,
+            route: "/dict"
+        }
+
+        res.render("notifications/error-logged", data);
+    },
+    successDelete: (req, res, next) => {
+        let data = {
+            message: constantz.messages.successDelete,
+            route: "/dict"
+        }
+
+        res.render("notifications/success-logged", data);
     }
 }

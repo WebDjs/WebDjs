@@ -39,12 +39,16 @@ module.exports = {
             });
         });
     },
-    deleteTermsByTitle(titleValue, cb) {
-        Term.find({ title: titleValue }, (err, terms) => {
-            async.each(terms, function (dataItem, callback) {
-                dataItem.remove(cb);
-            });
-        });
+    deleteTerm(term) {
+        // return new Promise((resolve, reject) => {
+        //     Term.remove(term, function (err, removed) {
+        //         if (err) {
+        //             return reject(err);
+        //         }
+
+        //         return resolve(removed);
+        //     });
+        // });
     },
     createTerm(newTerm, callback) {
         Term.create(newTerm, callback);

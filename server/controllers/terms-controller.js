@@ -90,9 +90,10 @@ module.exports = {
                                 res.status(400);
                                 res.redirect("/error-add");
                             }
-
-                            res.status(200);
-                            res.redirect("/success-add");
+                            else {
+                                res.status(200);
+                                res.redirect("/success-add");
+                            }
                         });
                     }
                     else {
@@ -107,27 +108,22 @@ module.exports = {
         }
     },
     postTermToDelete: (req, res) => {
-        let titleValue = req.body.data;
-
-        data.terms.deleteTermsByTitle(titleValue, (err, back) => {
-            if (err) {
-                console.log("Failed to delete new term: " + err);
-                res.status(400);
-            }
-            else {
-                res.status(200);
-                console.log('blabla');
-                
-                res.redirect("/dict");
-            }
-        });
+        res.status(400);
+        res.redirect("/error-not-pro");
+        // let titleValue = req.body.data.data;
+        // data.terms.deleteTerm(titleValue)
+        //     .then((data) => {
+        //         data.terms.deleteTerm(data);
+        //     });
     },
     postTermToEdit: (req, res) => {
-        let titleValue = req.body.data;
+        res.status(400);
+        res.redirect("/error-not-pro");
+        // let titleValue = req.body.data;
 
-        data.terms.getTermsByTitle(titleValue)
-            .then((result) => {
-                currentTerm = result[0];
-            });
+        // data.terms.getTermsByTitle(titleValue)
+        //     .then((result) => {
+        //         currentTerm = result[0];
+        //     });
     }
 };

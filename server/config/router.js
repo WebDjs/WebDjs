@@ -15,6 +15,9 @@ module.exports = function (app) {
     app.get("/error-add", controllers.main.errorAdd);
     app.get("/error-same-add", controllers.main.errorSameAdd);
     app.get("/success-add", controllers.main.successAdd);
+    app.get("/error-not-pro", controllers.main.errorDelEdit);
+    //app.get("/error-delete", controllers.main.errorDelete);
+    //app.get("/success-delete", controllers.main.successDelete);
 
     // user registration and login routes
     app.get("/register", controllers.users.getRegister);

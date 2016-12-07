@@ -19,4 +19,4 @@ The app includes:
     + Node.js, Express;
     + MongoDB;
     
-Registration is free and required because of feedback.
+The app is available on [WebDjs](https://webdjs.herokuapp.com/ "WebDjs")

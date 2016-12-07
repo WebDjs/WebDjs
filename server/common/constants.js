@@ -9,7 +9,10 @@ module.exports = {
         errorAdd: "Adding failed! Please, enter title and description!",
         errorSameAdd: "Adding failed! Title already exists!",
         successAdd: "Term is added!",
-        errorLogin: "Wrong username or password!"
+        errorLogin: "Wrong username or password!",
+        successDelete: "Term is deleted!",
+        errorDelete: "Term can not be deleted!",
+        errorNotPro: "Only user with status 'Pro' can delete term!"
     },
     logos: [{
         title: "HTML",

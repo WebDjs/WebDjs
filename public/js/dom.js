@@ -9,6 +9,15 @@ let requester = {
             success: func || window.location.reload(),
             dataType: "json"
         });
+    },
+    get: (url, data, func) => {
+        return $.ajax({
+            type: "GET",
+            url: url,
+            data: { data: data },
+            success: func || window.location.reload(),
+            dataType: "json"
+        });
     }
 }
 
@@ -87,15 +96,19 @@ function isMatching(sample, listWord) {
 
 $("#dict-delete.btn.btn-danger").on("click", function () {
     let currentItem = $("p.term-name").html();
+    console.log(currentItem);
+    
 
-    requester.post("/delete");
+    //requester.post("/delete", currentItem);
+    requester.get("/error-not-pro");
 });
 
 //===========================================
 
 $("#dict-edit.btn.btn-success").on("click", function () {
     let currentItem = $("p.term-name").html();
-    requester.post("/edit", currentItem );
+    //requester.post("/edit", currentItem );
+    requester.get("/error-not-pro");
 });
 
 //===========================================

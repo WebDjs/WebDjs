@@ -3,7 +3,7 @@
 }
 
 nav {
-    border-bottom: 1px solid whitesmoke
+    border-bottom: 1px solid whitesmoke;
 }
 
 #main-logo-name {
@@ -239,5 +239,42 @@ footer {
     }
     to {
         top: 0px;
+    }
+}
+
+.logo-text {
+    position: absolute;
+    color: #222222;
+    font-size: 14px;
+    font-weight: bold;
+    top: 28px;
+    left: 60px;
+    visibility: visible;
+}
+.logo-text:hover {
+    color: lightgrey;
+    -webkit-animation: opac 5s;
+    animation: opac 5s;
+}
+
+ul#main-menu.nav.navbar-nav.navbar-center{
+    margin-left: 6%;
+}
+
+@-webkit-keyframes opac {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes opac {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }

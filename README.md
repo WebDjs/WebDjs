@@ -5,7 +5,10 @@ This application supports your web education. It is based on MVC architecture wi
 
 ![MVC](https://www.codeproject.com/KB/aspnet/528117/16.JPG "MVC")
 
-About the server is used Express. As an ODM is used Mongoose. For authentication is used Passport.
+About the server is used Express. 
+The view engine is Pug. 
+As an ODM is used Mongoose. 
+For authentication is used Passport.
 
 The app includes:
  1. Registration and login system;

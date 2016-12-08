@@ -108,13 +108,9 @@ module.exports = {
         }
     },
     postTermToDelete: (req, res) => {
-        res.status(400);
-        res.redirect("/error-not-pro");
-        // let titleValue = req.body.data.data;
-        // data.terms.deleteTerm(titleValue)
-        //     .then((data) => {
-        //         data.terms.deleteTerm(data);
-        //     });
+        let titleValue = req.body.data;
+
+        data.terms.deleteTerm(titleValue);
     },
     postTermToEdit: (req, res) => {
         res.status(400);

@@ -1,4 +1,4 @@
-# WebDjs
+# Webdjs
 ## Standard Web Application with node.js, express and  MongoDB
 
 This application supports your web education. It is based on MVC architecture with NoSQL database - MongoDB.
@@ -19,4 +19,4 @@ The app includes:
     + Node.js, Express;
     + MongoDB;
     
-The app is available on [WebDjs](https://webdjs.herokuapp.com/ "WebDjs")
+The app is available on [Webdjs](https://webdjs.herokuapp.com/ "Webdjs")

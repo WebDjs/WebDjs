@@ -9,37 +9,31 @@ let requester = {
             success: func || window.location.reload(),
             dataType: "json"
         });
-    },
-    get: (url, data, func) => {
-        return $.ajax({
-            type: "GET",
-            url: url,
-            data: { data: data },
-            success: func || window.location.reload(),
-            dataType: "json"
-        });
     }
 }
 
-//===========================================
+let clean = function () {
+    $("p.term-name").text("");
+    $("textarea.term-definition.text").text("");
+};
 
-$(".logoLink").on("click", function () {
+function isMatching(sample, listWord) {
+    sample = sample.toUpperCase();
+    listWord = listWord.toUpperCase();
 
-    let altValue = $(this).children("img").attr("alt") || $(".logoImgHome").attr("alt");
+    if (listWord.length < sample.length) {
+        return false;
+    }
 
-    $("#obj-title").html(altValue.toUpperCase());
+    let j;
+    for (j = 0; j < sample.length; j += 1) {
+        if (listWord[j] !== sample[j]) {
+            return false;
+        }
+    }
 
-    requester.post("/dict-tag", altValue);
-});
-
-//===========================================
-
-$(".current-term-title").on("click", function () {
-    let currentItem = $(this);
-    let currentTitle = currentItem.text();
-
-    requester.post("/dict-current-title", currentTitle);
-});
+    return true;
+}
 
 //===========================================
 
@@ -74,33 +68,36 @@ $(".search-space").on("change", function () {
     window.location.reload(true);
 });
 
-function isMatching(sample, listWord) {
-    sample = sample.toUpperCase();
-    listWord = listWord.toUpperCase();
+//===========================================
 
-    if (listWord.length < sample.length) {
-        return false;
-    }
+$(".logoLink").on("click", function () {
+    clean();
 
-    let j;
-    for ( j = 0; j < sample.length; j += 1) {
-        if (listWord[j] !== sample[j]) {
-            return false;
-        }
-    }
+    let altValue = $(this).children("img").attr("alt") || $(".logoImgHome").attr("alt");
 
-    return true;
-}
+    $("#obj-title").html(altValue.toUpperCase());
+
+    requester.post("/dict-tag", altValue);
+});
+
+//===========================================
+
+$(".current-term-title").on("click", function () {
+    clean();
+
+    let currentItem = $(this);
+    let currentTitle = currentItem.text();
+
+    requester.post("/dict-current-title", currentTitle);
+});
 
 //===========================================
 
 $("#dict-delete.btn.btn-danger").on("click", function () {
+    clean();
     let currentItem = $("p.term-name").html();
-    console.log(currentItem);
-    
 
-    //requester.post("/delete", currentItem);
-    requester.get("/error-not-pro");
+    requester.post("/delete", currentItem);
 });
 
 //===========================================
@@ -108,7 +105,7 @@ $("#dict-delete.btn.btn-danger").on("click", function () {
 $("#dict-edit.btn.btn-success").on("click", function () {
     let currentItem = $("p.term-name").html();
     //requester.post("/edit", currentItem );
-    requester.get("/error-not-pro");
+    //requester.get("/error-not-pro");
 });
 
 //===========================================

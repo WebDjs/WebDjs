@@ -39,16 +39,16 @@ module.exports = {
             });
         });
     },
-    deleteTerm(term) {
-        // return new Promise((resolve, reject) => {
-        //     Term.remove(term, function (err, removed) {
-        //         if (err) {
-        //             return reject(err);
-        //         }
+    deleteTerm(termTitle) {
+        return new Promise((resolve, reject) => {
+             Term.findOneAndRemove({ title: termTitle }, (err, msg) => {
+                if (err) {
+                    return reject(err);
+                }
 
-        //         return resolve(removed);
-        //     });
-        // });
+                return resolve(msg);
+            });
+        });
     },
     createTerm(newTerm, callback) {
         Term.create(newTerm, callback);

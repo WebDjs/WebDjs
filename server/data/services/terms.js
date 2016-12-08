@@ -39,14 +39,11 @@ module.exports = {
             });
         });
     },
-    deleteTerm(termTitle) {
+    deleteTerm(termTitle, cb) {
         return new Promise((resolve, reject) => {
-             Term.findOneAndRemove({ title: termTitle }, (err, msg) => {
-                if (err) {
-                    return reject(err);
-                }
-
-                return resolve(msg);
+            Term.update({ title: termTitle }, { $set: { tag: "deprecated" } }, (err, data) => {
+                resolve(err);
+                reject(data);
             });
         });
     },

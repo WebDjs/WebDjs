@@ -110,7 +110,9 @@ module.exports = {
     postTermToDelete: (req, res) => {
         let titleValue = req.body.data;
 
-        data.terms.deleteTerm(titleValue);
+        data.terms.deleteTerm(titleValue).then(
+            () => { res.redirect("/dict"); }
+        );
     },
     postTermToEdit: (req, res) => {
         res.status(400);

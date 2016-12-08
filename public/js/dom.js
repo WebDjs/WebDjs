@@ -71,7 +71,7 @@ $(".search-space").on("change", function () {
 //===========================================
 
 $(".logoLink").on("click", function () {
-    clean();
+    //clean();
 
     let altValue = $(this).children("img").attr("alt") || $(".logoImgHome").attr("alt");
 
@@ -83,7 +83,7 @@ $(".logoLink").on("click", function () {
 //===========================================
 
 $(".current-term-title").on("click", function () {
-    clean();
+    //clean();
 
     let currentItem = $(this);
     let currentTitle = currentItem.text();
@@ -94,7 +94,7 @@ $(".current-term-title").on("click", function () {
 //===========================================
 
 $("#dict-delete.btn.btn-danger").on("click", function () {
-    clean();
+    //clean();
     let currentItem = $("p.term-name").html();
 
     requester.post("/delete", currentItem);

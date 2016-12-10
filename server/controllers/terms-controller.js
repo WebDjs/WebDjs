@@ -13,11 +13,13 @@ let data = require("../data"),
 
 function dataUsername() {
     return new Promise((resolve, reject) => {
-        fs.readFile("./server/common/username.txt", (err, data) => {
-            resolve(data.toString());
-            reject(err);
-        });
-    })
+        fs.readFile("./server/common/username.txt", "utf8", (err, data) => {
+            if (err) {
+                reject(err);
+            }
+            resolve(data);
+        })
+    });
 }
 
 module.exports = {
@@ -27,7 +29,7 @@ module.exports = {
         data.terms.getTermsByTitle(titleValue)
             .then((result) => {
                 currentTerm = result[0];
-            });
+            }).catch(err => console.log(err));;
 
         res.redirect("/dict-not-logged");
     },
@@ -58,7 +60,7 @@ module.exports = {
                 }
 
                 res.render("dict-not-logged", dataObj);
-            });
+            }).catch(err => console.log(err));
     },
     getDict: (req, res) => {
         data.terms.getTermsByTag(termsTag)
@@ -74,8 +76,8 @@ module.exports = {
                         }
 
                         res.render("dict", dataObj);
-                    })
-            });
+                    });
+            }).catch((err) => console.log("There is err" + err));
     },
     postTerm: (req, res) => {
         let newTerm = req.body;
@@ -100,7 +102,7 @@ module.exports = {
                         res.status(400);
                         res.redirect("/error-same-add");
                     }
-                });
+                }).catch(err => console.log(err));
         }
         else {
             res.status(400);
@@ -110,14 +112,11 @@ module.exports = {
     postTermToDelete: (req, res) => {
         let titleValue = req.body.data;
 
-        data.terms.deleteTerm(titleValue).then(
-            () => { res.redirect("/dict"); }
-        );
+        data.terms.deleteTerm(titleValue);
+        // res.redirect("/dict");
     },
     postTermToEdit: (req, res) => {
-        res.status(400);
-        res.redirect("/error-not-pro");
-        // let titleValue = req.body.data;
+        let titleValue = req.body.data;
 
         // data.terms.getTermsByTitle(titleValue)
         //     .then((result) => {

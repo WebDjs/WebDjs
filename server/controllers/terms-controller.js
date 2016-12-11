@@ -16,6 +16,7 @@ function dataUsername() {
         fs.readFile("./server/common/username.txt", "utf8", (err, data) => {
             if (err) {
                 reject(err);
+                return;
             }
             resolve(data);
         })
@@ -112,8 +113,11 @@ module.exports = {
     postTermToDelete: (req, res) => {
         let titleValue = req.body.data;
 
-        data.terms.deleteTerm(titleValue);
-        // res.redirect("/dict");
+        data.terms.deleteTerm(titleValue)
+            .then(() => {
+                res.redirect("/dict");
+            })
+            .catch(err => console.log(err));
     },
     postTermToEdit: (req, res) => {
         let titleValue = req.body.data;

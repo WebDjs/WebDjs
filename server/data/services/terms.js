@@ -10,10 +10,11 @@ module.exports = {
         return new Promise((resolve, reject) => {
             Term.find((err, terms) => {
                 if (err) {
-                    return reject(err);
+                    reject(err);
+                    return;
                 }
 
-                return resolve(terms);
+                resolve(terms);
             });
         });
     },
@@ -21,10 +22,11 @@ module.exports = {
         return new Promise((resolve, reject) => {
             Term.find({ tag: tag }).sort({ title: 1 }).exec((err, terms) => {
                 if (err) {
-                    return reject(err);
+                    reject(err);
+                    return ;
                 }
 
-                return resolve(terms);
+                resolve(terms);
             });
         });
     },
@@ -35,7 +37,7 @@ module.exports = {
                     return reject(err);
                 }
 
-                return resolve(terms);
+                resolve(terms);
             });
         });
     },
@@ -44,7 +46,9 @@ module.exports = {
             Term.update({ title: termTitle }, { $set: { tag: "deprecated" } }, (err, data) => {
                 if (err) {
                     reject(err);
+                    return;
                 }
+                
                 resolve(data);
             });
         });

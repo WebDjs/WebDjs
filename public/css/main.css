@@ -12,10 +12,7 @@ nav {
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
 }
 
-a:hover,
-a:visited,
-a:link,
-a:active {
+a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 
@@ -251,13 +248,14 @@ footer {
     left: 60px;
     visibility: visible;
 }
+
 .logo-text:hover {
     color: lightgrey;
     -webkit-animation: opac 5s;
     animation: opac 5s;
 }
 
-ul#main-menu.nav.navbar-nav.navbar-center{
+ul#main-menu.nav.navbar-nav.navbar-center {
     margin-left: 7%;
 }
 
@@ -277,4 +275,10 @@ ul#main-menu.nav.navbar-nav.navbar-center{
     to {
         opacity: 0;
     }
+}
+
+div.form-container h3, div.form-container input.btn {
+    text-align: center;
+    display: block;
+    margin: 0 auto
 }

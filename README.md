@@ -1,5 +1,5 @@
 # Webdjs
-## Standard Web Application with node.js, express and  MongoDB
+## Standard Web Application with node.js, express.js and  MongoDB
 
 This application supports your web education. It is based on MVC architecture with NoSQL database - MongoDB.
 
@@ -12,8 +12,7 @@ For authentication is used Passport.
 
 The app includes:
  1. Registration and login system;
- 2. User profile;
- 3. Tests, tasks and dictionary about:
+ 2. Dictionary about:
     + HTML, CSS, Bootstrap, LESS, SASS, Stylus;
     + JavaScript, JQuery, TypeScript, Angular, React;
     + Node.js, Express;

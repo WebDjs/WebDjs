@@ -23,7 +23,7 @@ module.exports = {
             Term.find({ tag: tag }).sort({ title: 1 }).exec((err, terms) => {
                 if (err) {
                     reject(err);
-                    return ;
+                    return;
                 }
 
                 resolve(terms);
@@ -41,17 +41,8 @@ module.exports = {
             });
         });
     },
-    deleteTerm(termTitle) {
-        return new Promise((resolve, reject) => {
-            Term.update({ title: termTitle }, { $set: { tag: "deprecated" } }, (err, data) => {
-                if (err) {
-                    reject(err);
-                    return;
-                }
-                
-                resolve(data);
-            });
-        });
+    deleteTerm(termTitle, callback) {
+        Term.update({ title: termTitle }, { $set: { tag: "deprecated" } }, callback);
     },
     createTerm(newTerm, callback) {
         Term.create(newTerm, callback);

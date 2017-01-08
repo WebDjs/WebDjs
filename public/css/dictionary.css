@@ -124,6 +124,7 @@ ul {
     font-size: 24px;
 }
 
+
 /*========================================*/
 
 .dropdown-menu {
@@ -168,4 +169,10 @@ label.add-label {
 
 .btn-save {
     min-width: 93%;
+}
+
+#dict-add {
+    margin-left: 118px;
+    max-height: 30px;
+    min-width: 150px
 }

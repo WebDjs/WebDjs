@@ -113,11 +113,17 @@ module.exports = {
     postTermToDelete: (req, res) => {
         let titleValue = req.body.data;
 
-        data.terms.deleteTerm(titleValue)
-            .then(() => {
-                res.redirect("/dict");
-            })
-            .catch(err => console.log(err));
+        data.terms.deleteTerm(titleValue, (err, term) => {
+            if (err) {
+                console.log("Failed to delete new term: " + err);
+                res.status(400);
+                res.redirect("/error-add");
+            }
+            else {
+                res.status(200);
+                res.redirect("/success-add");
+            }
+        });
     },
     postTermToEdit: (req, res) => {
         let titleValue = req.body.data;
@@ -128,3 +134,4 @@ module.exports = {
         //     });
     }
 };
+
